@@ -20,11 +20,11 @@ SOFTWARE.
 
 use std::io;
 
-fn main() {
-    //mutable variable for main menu
-    let mut choise = String::new();
-    
+fn main() {    
     loop {
+        //mutable variable for main menu
+        let mut choise = String::new();
+
         //main menu
         menu_main();
 
@@ -39,8 +39,10 @@ fn main() {
             Ok(num) => num,
             Err(_) => continue,
         };
+
+        println!("{}", choise);
     }
-    println!("{}", choise);
+    //println!("{}", choise);
 }
 
 //main menu function
