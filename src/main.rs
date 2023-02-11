@@ -35,15 +35,15 @@ fn main() {
 
         //checks if it's a number
         let choise: u8 = match choise.trim().parse() {
+            Ok(0) => break,
             Ok(num) => num,
             Err(_) => continue,
         };
-        break;
     }
     println!("{}", choise);
 }
 
 //main menu function
 fn menu_main() {
-    println!(" -----------------------\n|    Finance manager    |\n -----------------------\n|   Choose an option:   |\n|  [1] Insert products  |\n|  [2] Show percentage  |\n -----------------------");
+    println!(" -----------------------\n|    Finance manager    |\n -----------------------\n|   Choose an option:   |\n|  [1] Insert products  |\n|  [2] Show percentage  |\n|  [0] Exit             |\n -----------------------\n");
 }
