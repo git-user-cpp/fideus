@@ -39,7 +39,8 @@ fn main() {
             Ok(num) => num,
             Err(_) => continue,
         };
-
+        
+        //for tests
         println!("{}", choise);
     }
 }
