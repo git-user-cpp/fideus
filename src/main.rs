@@ -42,7 +42,6 @@ fn main() {
 
         println!("{}", choise);
     }
-    //println!("{}", choise);
 }
 
 //main menu function
