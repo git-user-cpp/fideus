@@ -19,5 +19,11 @@ SOFTWARE.
 */
 
 fn main() {
-    println!("Hello, world!");
+    //main menu
+    menu_main();
+}
+
+//main menu function
+fn menu_main() {
+    println!(" -----------------------\n|    Finance manager    |\n -----------------------\n|   Choose an option:   |\n|  [1] Insert products  |\n|  [2] Show percentage  |\n -----------------------");
 }
