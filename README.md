@@ -1,5 +1,5 @@
 # Finance manager
-finance manager
+:heavy_dollar_sign: finance manager
 
 ## ⚠️ LICENSE ⚠️
 MIT License
