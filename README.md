@@ -23,3 +23,17 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
+
+## 💻 How to use this app 💻
+
+1) ⚠️ **The application is designed for Linux, so avoid using other systems or remake the program to avoid bugs.** ⚠️
+
+2) 🗂️ Download *all* files and put them in a one directory.
+
+3) ⚒️ Compile and run the program with *cargo*.
+    - Сompilation example
+    ```
+    cargo run
+    ```
+    
+5) 🌠 ENJOY =)
