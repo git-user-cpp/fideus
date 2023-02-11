@@ -18,9 +18,29 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 */
 
+use std::io;
+
 fn main() {
-    //main menu
-    menu_main();
+    //mutable variable for main menu
+    let mut choise = String::new();
+    
+    loop {
+        //main menu
+        menu_main();
+
+        //choosing an option
+        io::stdin()
+            .read_line(&mut choise)
+            .expect("Failed to read line");
+
+        //checks if it's a number
+        let choise: u8 = match choise.trim().parse() {
+            Ok(num) => num,
+            Err(_) => continue,
+        };
+        break;
+    }
+    println!("{}", choise);
 }
 
 //main menu function
