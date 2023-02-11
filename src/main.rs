@@ -18,12 +18,32 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 */
 
+use std::io;
+
 fn main() {
-    //main menu
-    menu_main();
+    //mutable variable for main menu
+    let mut choise = String::new();
+    
+    loop {
+        //main menu
+        menu_main();
+
+        //choosing an option
+        io::stdin()
+            .read_line(&mut choise)
+            .expect("Failed to read line");
+
+        //checks if it's a number
+        let choise: u8 = match choise.trim().parse() {
+            Ok(0) => break,
+            Ok(num) => num,
+            Err(_) => continue,
+        };
+    }
+    println!("{}", choise);
 }
 
 //main menu function
 fn menu_main() {
-    println!(" -----------------------\n|    Finance manager    |\n -----------------------\n|   Choose an option:   |\n|  [1] Insert products  |\n|  [2] Show percentage  |\n -----------------------");
+    println!(" -----------------------\n|    Finance manager    |\n -----------------------\n|   Choose an option:   |\n|  [1] Insert products  |\n|  [2] Show percentage  |\n|  [0] Exit             |\n -----------------------\n");
 }
