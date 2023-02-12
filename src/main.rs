@@ -32,8 +32,10 @@ fn main() {
         //checks if it's correct
         let choise: u8 = match choise.trim().parse() {
             Ok(0) => break,
-            Ok(num) => num,
+            Ok(1) => 1,
+            Ok(2) => 2,
             Err(_) => continue,
+            Ok(i32::MIN..=-1_i32) | Ok(3_i32..=i32::MAX) => continue,
         };
         
         //for tests
