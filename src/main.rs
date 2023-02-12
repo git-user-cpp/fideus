@@ -23,15 +23,16 @@ mod menu_first;
 mod menu_second;
 mod options;
 
-fn main() {    
+fn main() {
+    //loop for main menu
     loop {
-        //main menu
+        //main menu call
         menu_main::show_menu();
 
         //choosing an option
         let choise = options::make_choise();
 
-        //checks if it's correct
+        //checks if input is correct
         let choise: u8 = match choise.trim().parse() {
             Ok(0) => break,
             Ok(1) => 1,
@@ -40,8 +41,10 @@ fn main() {
             Ok(i32::MIN..=-1_i32) | Ok(3_i32..=i32::MAX) => continue,
         };
 
+        //checks which option to show
         if choise == 1 {
             menu_first::show_first_option();
+            menu_first::run_first_option();
         }else if choise == 2 {
             menu_second::show_second_option();
         }
