@@ -18,35 +18,7 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 */
 
-mod menu_main;
-mod menu_first;
-mod menu_second;
-mod options;
-
-fn main() {    
-    loop {
-        //main menu
-        menu_main::show_menu();
-
-        //choosing an option
-        let choise = options::make_choise();
-
-        //checks if it's correct
-        let choise: u8 = match choise.trim().parse() {
-            Ok(0) => break,
-            Ok(1) => 1,
-            Ok(2) => 2,
-            Err(_) => continue,
-            Ok(i32::MIN..=-1_i32) | Ok(3_i32..=i32::MAX) => continue,
-        };
-
-        if choise == 1 {
-            menu_first::show_first_option();
-        }else if choise == 2 {
-            menu_second::show_second_option();
-        }
-        
-        //for tests
-        //println!("{}", choise);
-    }
+//function for first menu option
+pub fn show_first_option() {
+   println!("first option"); 
 }
