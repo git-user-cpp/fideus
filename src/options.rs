@@ -10,3 +10,12 @@ pub fn make_choise() -> String {
 
     choise
 }
+
+//function for input products
+pub fn read_product(tmp: &mut String) -> String {
+    io::stdin()
+        .read_line(tmp)
+        .expect("failed to read line");
+
+    tmp.to_string()
+}
