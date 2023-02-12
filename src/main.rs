@@ -20,13 +20,16 @@ SOFTWARE.
 
 use std::io;
 
+mod menu_main;
+//use crate::menu_main;
+
 fn main() {    
     loop {
         //mutable variable for main menu
         let mut choise = String::new();
 
         //main menu
-        menu_main();
+        menu_main::show_menu();
 
         //choosing an option
         io::stdin()
@@ -43,9 +46,4 @@ fn main() {
         //for tests
         println!("{}", choise);
     }
-}
-
-//main menu function
-fn menu_main() {
-    println!(" -----------------------\n|    Finance manager    |\n -----------------------\n|   Choose an option:   |\n|  [1] Insert products  |\n|  [2] Show percentage  |\n|  [0] Exit             |\n -----------------------\n");
 }
