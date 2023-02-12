@@ -18,25 +18,18 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 */
 
-use std::io;
-
 mod menu_main;
-//use crate::menu_main;
+mod options;
 
 fn main() {    
     loop {
-        //mutable variable for main menu
-        let mut choise = String::new();
-
         //main menu
         menu_main::show_menu();
 
         //choosing an option
-        io::stdin()
-            .read_line(&mut choise)
-            .expect("Failed to read line");
+        let choise = options::make_choise();
 
-        //checks if it's a number
+        //checks if it's correct
         let choise: u8 = match choise.trim().parse() {
             Ok(0) => break,
             Ok(num) => num,
