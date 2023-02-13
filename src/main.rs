@@ -26,6 +26,10 @@ mod menu_second;
 mod options;
 
 fn main() {
+
+    //hashmap for holding products data
+    let mut products = HashMap::<String, String>::new();
+
     //loop for main menu
     loop {
         //main menu call
@@ -43,9 +47,6 @@ fn main() {
             Ok(i32::MIN..=-1_i32) | Ok(3_i32..=i32::MAX) => continue,
         };
 
-        //hashmap for holding products data
-        let mut products = HashMap::<String, String>::new();
-
         //checks which option to show
         if choise == 1 {
             //running the first option
@@ -54,6 +55,7 @@ fn main() {
         }else if choise == 2 {
             //running the second option
             menu_second::show_second_option();
+            menu_second::run_second_option(&products);
         }
     }
 }
