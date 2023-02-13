@@ -47,14 +47,13 @@ fn main() {
         if choise == 1 {
             //hashmap for holding products data
             let mut products = HashMap::<String, String>::new();
-
+            
+            //running the first option
             menu_first::show_first_option();
             menu_first::run_first_option(&mut products);
         }else if choise == 2 {
+            //running the second option
             menu_second::show_second_option();
         }
-        
-        //for tests
-        //println!("{}", choise);
     }
 }
