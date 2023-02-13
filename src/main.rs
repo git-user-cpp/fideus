@@ -52,6 +52,7 @@ fn main() {
             menu_first::show_first_option();
             menu_first::run_first_option(&mut products);
         }else if choise == 2 {
+            //running the second option
             menu_second::show_second_option();
         }
     }
