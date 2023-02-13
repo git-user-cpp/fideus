@@ -18,8 +18,15 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 */
 
+use std::collections::HashMap;
+
 //function for second menu option
 pub fn show_second_option() {
    println!("second option"); 
 }
 
+pub fn run_second_option(products: &HashMap<String, String>) {
+    for (key, value) in products {
+        println!("{key} {value}");
+    }
+}
