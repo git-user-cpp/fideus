@@ -18,39 +18,43 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 */
 
+use std::collections::HashMap;
+
 //function for showing the first menu option
 pub fn show_first_option() {
    println!(" -----------------------\n|    Insert products    |\n -----------------------"); 
 }
 
 //function for the first option
-pub fn run_first_option() {
-    //vector for holding products data
-    let mut products: Vec<String> = Vec::new();
-
+pub fn run_first_option(products: &mut HashMap<String, String>) {
     loop {
         println!("| Please input amount of your products:");
 
         //using options function to get user's input (yeah, I'm relatively lazy :D)
         let amount = crate::options::make_choise();
-
         let amount: u32 = match amount.trim().parse() {
             Ok(num) => num,
             Err(_) => continue,
         };
         
+        //input
         for i in 0..amount {
-            println!("| Input {} product", i+1);
+            let mut name = String::new();
+            let mut price = String::new();
 
-            let mut tmp = String::new();
-            
-            products.push(crate::options::read_product(&mut tmp));
+            println!("| Input {} product name:", i+1);
+            let new_name = crate::options::read_product(&mut name);
+            println!("| Input {} product price:", i+1);
+            let new_price = crate::options::read_product(&mut price);
+
+            products.insert(new_name, new_price);
         }
 
         break;
     }
-
-    for element in products {
-        println!("{}", element);
+    
+    //for tests
+    for (key, value) in products {
+        println!("{} {}", key, value);
     }
 }
