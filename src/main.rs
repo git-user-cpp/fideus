@@ -43,11 +43,11 @@ fn main() {
             Ok(i32::MIN..=-1_i32) | Ok(3_i32..=i32::MAX) => continue,
         };
 
+        //hashmap for holding products data
+        let mut products = HashMap::<String, String>::new();
+
         //checks which option to show
         if choise == 1 {
-            //hashmap for holding products data
-            let mut products = HashMap::<String, String>::new();
-            
             //running the first option
             menu_first::show_first_option();
             menu_first::run_first_option(&mut products);
