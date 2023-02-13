@@ -18,6 +18,8 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 */
 
+use std::collections::HashMap;
+
 mod menu_main;
 mod menu_first;
 mod menu_second;
@@ -43,8 +45,11 @@ fn main() {
 
         //checks which option to show
         if choise == 1 {
+            //hashmap for holding products data
+            let mut products = HashMap::<String, String>::new();
+
             menu_first::show_first_option();
-            menu_first::run_first_option();
+            menu_first::run_first_option(&mut products);
         }else if choise == 2 {
             menu_second::show_second_option();
         }
