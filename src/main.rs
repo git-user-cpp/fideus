@@ -53,8 +53,5 @@ fn main() {
         }else if choise == 2 {
             menu_second::show_second_option();
         }
-        
-        //for tests
-        //println!("{}", choise);
     }
 }
