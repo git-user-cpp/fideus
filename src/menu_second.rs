@@ -21,15 +21,13 @@ SOFTWARE.
 use std::collections::HashMap;
 use colored::*;
 
-//function for second menu option
+//function for showing the second menu option
 pub fn show_second_option() {
-   println!(" {}\n{} {} {}\n {}", "-----------------------".blue(), "|".blue(), "   Show percentage   ".green(), "|".blue(), "-----------------------".blue()); 
+   println!(" {}\n{} {} {}\n {}", "-----------------------".blue(), "|".blue(), "    Show total sum   ".green(), "|".blue(), "-----------------------".blue()); 
 }
 
+//function for running the second menu option
 pub fn run_second_option(products: &HashMap<String, String>) {
-    for (name, price) in products {
-        println!(" {}\n {} {} {}","-----------------------".red(), name, price, "-----------------------".red());
-    }
-
-    crate::options::count_percentage(products);
+    crate::options::show_list(products);
+    crate::options::count_total_sum(products);
 }

@@ -42,8 +42,15 @@ pub fn read_product(tmp: &mut String) -> String {
     tmp.to_string()
 }
 
-//function for counting percentage
-pub fn count_percentage(products: &HashMap<String, String>) {
+//function for showing the list of products
+pub fn show_list(products: &HashMap<String, String>) {
+    for (name, price) in products {
+        println!(" {}\n {} {} {}","-----------------------".red(), name, price, "-----------------------".red());
+    }
+}
+
+//function for counting total sum
+pub fn count_total_sum(products: &HashMap<String, String>) {
     //variable for total sum
     let mut sum: f64 = 0.0;
 
