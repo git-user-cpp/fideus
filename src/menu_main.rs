@@ -18,7 +18,9 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 */
 
+use colored::*;
+
 //main menu function
 pub fn show_menu() {
-    println!(" -----------------------\n|    Finance manager    |\n -----------------------\n|   Choose an option:   |\n|  [1] Insert products  |\n|  [2] Show percentage  |\n|  [0] Exit             |\n -----------------------\n");
+    println!(" -----------------------\n|    {}    |\n -----------------------\n|   Choose an option:   |\n|  {}  |\n|  {}  |\n|  {}             |\n -----------------------\n", "Finance manager".yellow(), "[1] Insert products".green(), "[2] Show percentage".green(), "[0] Exit".red());
 }
