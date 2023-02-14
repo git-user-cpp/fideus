@@ -22,5 +22,5 @@ use colored::*;
 
 //main menu function
 pub fn show_menu() {
-    println!(" -----------------------\n|    {}    |\n -----------------------\n|   Choose an option:   |\n|  {}  |\n|  {}  |\n|  {}             |\n -----------------------\n", "Finance manager".yellow(), "[1] Insert products".green(), "[2] Show percentage".green(), "[0] Exit".red());
+    println!(" {}\n{}    {}    {}\n {}\n{}   Choose an option:   {}\n{}  {}  {}\n{}  {}  {}\n{}  {}             {}\n {}\n", "-----------------------".blue(), "|".blue(),"Finance manager".yellow(), "|".blue(), "-----------------------".blue(), "|".blue(), "|".blue(), "|".blue(), "[1] Insert products".green(), "|".blue(), "|".blue(), "[2] Show percentage".green(), "|".blue(), "|".blue(), "[0] Exit".red(), "|".blue(), "-----------------------".blue());
 }
