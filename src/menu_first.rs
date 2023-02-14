@@ -43,9 +43,9 @@ pub fn run_first_option(products: &mut HashMap<String, String>) {
             let mut name = String::new();
             let mut price = String::new();
 
-            println!("{} {} {}", "> Input".red(), i+1, "product name:".red());
+            println!("{} {} {} {}{}", "> Input".red(), i+1, "product".red(), "name".yellow(), ":".red());
             let new_name = crate::options::read_product(&mut name);
-            println!("{} {} {}", "> Input".red(), i+1, "product price:".red());
+            println!("{} {} {} {}{}", "> Input".red(), i+1, "product".red(), "price".yellow(), ":".red());
             let new_price = crate::options::read_product(&mut price);
 
             products.insert(new_name, new_price);
