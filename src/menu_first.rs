@@ -19,16 +19,17 @@ SOFTWARE.
 */
 
 use std::collections::HashMap;
+use colored::*;
 
 //function for showing the first menu option
 pub fn show_first_option() {
-   println!(" -----------------------\n|    Insert products    |\n -----------------------"); 
+   println!(" {}\n{}    {}    {}\n {}", "-----------------------".blue(), "|".blue(), "Insert products".green(), "|".blue(), "-----------------------".blue()); 
 }
 
 //function for the first option
 pub fn run_first_option(products: &mut HashMap<String, String>) {
     loop {
-        println!("| Please input amount of your products:");
+        println!("{} {}", ">".red(), "Please input amount of your products:".green());
 
         //using options function to get user's input (yeah, I'm relatively lazy :D)
         let amount = crate::options::make_choise();
@@ -42,9 +43,9 @@ pub fn run_first_option(products: &mut HashMap<String, String>) {
             let mut name = String::new();
             let mut price = String::new();
 
-            println!("| Input {} product name:", i+1);
+            println!("{} {} {}", "> Input".red(), i+1, "product name:".red());
             let new_name = crate::options::read_product(&mut name);
-            println!("| Input {} product price:", i+1);
+            println!("{} {} {}", "> Input".red(), i+1, "product price:".red());
             let new_price = crate::options::read_product(&mut price);
 
             products.insert(new_name, new_price);
