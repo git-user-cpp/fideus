@@ -19,6 +19,8 @@ SOFTWARE.
 */
 
 use std::io;
+use std::collections::HashMap;
+use colored::*;
 
 //function for choosing an option
 pub fn make_choise() -> String {
@@ -38,4 +40,18 @@ pub fn read_product(tmp: &mut String) -> String {
         .expect("failed to read line");
 
     tmp.to_string()
+}
+
+//function for counting percentage
+pub fn count_percentage(products: &HashMap<String, String>) {
+    //variable for total sum
+    let mut sum: f64 = 0.0;
+
+    //counting total sum
+    for (name, price) in products {
+        let price: f64 = price.trim().parse().expect("Enter a number");
+        sum += price;
+    }
+
+    println!(" {} {}\n {}", "Total sum =".yellow(), sum, "-----------------------".red());
 }

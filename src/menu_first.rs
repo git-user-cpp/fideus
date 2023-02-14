@@ -53,9 +53,4 @@ pub fn run_first_option(products: &mut HashMap<String, String>) {
 
         break;
     }
-    
-    //for tests
-    for (key, value) in products {
-        println!("{} {}", key, value);
-    }
 }
