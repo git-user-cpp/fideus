@@ -26,7 +26,7 @@ pub fn show_first_option() {
    println!(" {}\n{}    {}    {}\n {}", "-----------------------".blue(), "|".blue(), "Insert products".green(), "|".blue(), "-----------------------".blue()); 
 }
 
-//function for the first option
+//function for running the first option
 pub fn run_first_option(products: &mut HashMap<String, String>) {
     loop {
         println!("{} {}", ">".red(), "Please input amount of your products:".green());

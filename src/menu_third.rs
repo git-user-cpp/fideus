@@ -18,10 +18,10 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 */
 
+use std::collections::HashMap;
 use colored::*;
 
-//main menu function
-pub fn show_menu() {
-    println!(" {}\n{}    {}    {}\n {}\n{}   Choose an option:   {}\n{}  {}  {}\n{}  {}  {}\n{} {} {}\n{}  {}             {}\n {}\n",
-"-----------------------".blue(), "|".blue(),"Finance manager".yellow(), "|".blue(), "-----------------------".blue(), "|".blue(), "|".blue(), "|".blue(), "[1] Insert products".green(), "|".blue(), "|".blue(), "[2] Show total sum ".green(), "|".blue(), "|".blue(), " [3] Show percentage ".green(), "|".blue(), "|".blue(), "[0] Exit".red(), "|".blue(), "-----------------------".blue());
+//function for showing the third menu option
+pub fn show_third_option() {
+   println!(" {}\n{}    {}    {}\n {}", "-----------------------".blue(), "|".blue(), "Show percentage".green(), "|".blue(), "-----------------------".blue());
 }

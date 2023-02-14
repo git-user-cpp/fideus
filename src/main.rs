@@ -23,6 +23,7 @@ use std::collections::HashMap;
 mod menu_main;
 mod menu_first;
 mod menu_second;
+mod menu_third;
 mod options;
 
 fn main() {
@@ -43,6 +44,7 @@ fn main() {
             Ok(0) => break,
             Ok(1) => 1,
             Ok(2) => 2,
+            Ok(3) => 3,
             Err(_) => continue,
             Ok(i32::MIN..=-1_i32) | Ok(3_i32..=i32::MAX) => continue,
         };
@@ -56,6 +58,9 @@ fn main() {
             //running the second option
             menu_second::show_second_option();
             menu_second::run_second_option(&products);
+        }else if choise == 3 {
+            //running the third option
+            menu_third::show_third_option();
         }
     }
 }
