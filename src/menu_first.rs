@@ -17,8 +17,7 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 */
-
-use std::collections::HashMap;
+use crate::Product;
 use colored::*;
 
 //function for showing the first menu option
@@ -27,7 +26,7 @@ pub fn show_first_option() {
 }
 
 //function for running the first option
-pub fn run_first_option(products: &mut HashMap<String, String>) {
+pub fn run_first_option(products: &mut Vec<Product>) {
     loop {
         println!("{} {}", ">".red(), "Please input amount of your products:".green());
 
@@ -43,12 +42,21 @@ pub fn run_first_option(products: &mut HashMap<String, String>) {
             let mut name = String::new();
             let mut price = String::new();
 
+            println!(" {}","-----------------------".red());
             println!("{} {} {} {}{}", "> Input".red(), i+1, "product".red(), "name".yellow(), ":".red());
             let new_name = crate::options::read_product(&mut name);
             println!("{} {} {} {}{}", "> Input".red(), i+1, "product".red(), "price".yellow(), ":".red());
             let new_price = crate::options::read_product(&mut price);
+            println!(" {}","-----------------------".red());
 
-            products.insert(new_name, new_price);
+            let new_price: f64 = new_price.trim().parse().expect("Failed to convert");
+
+            let prod: Product = Product {
+                name: new_name,
+                price: new_price,
+            };
+
+            products.push(prod);
         }
 
         break;

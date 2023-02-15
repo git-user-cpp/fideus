@@ -18,18 +18,21 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 */
 
-use std::collections::HashMap;
-
 mod menu_main;
 mod menu_first;
 mod menu_second;
 mod menu_third;
 mod options;
 
-fn main() {
+pub struct Product {
+    name: String,
+    price: f64,
+}
 
+fn main() {
+    
     //hashmap for holding products data
-    let mut products = HashMap::<String, String>::new();
+    let mut products_list: Vec<Product> = Vec::new();
 
     //loop for main menu
     loop {
@@ -53,11 +56,11 @@ fn main() {
         if choise == 1 {
             //running the first option
             menu_first::show_first_option();
-            menu_first::run_first_option(&mut products);
+            menu_first::run_first_option(&mut products_list);
         }else if choise == 2 {
             //running the second option
             menu_second::show_second_option();
-            menu_second::run_second_option(&products);
+            menu_second::run_second_option(&products_list);
         }else if choise == 3 {
             //running the third option
             menu_third::show_third_option();
