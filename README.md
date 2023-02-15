@@ -35,6 +35,6 @@ SOFTWARE.
     ```
     cargo run
     ```
-4) Choose the first function by inserting **1**, then enter the number of products, product names and prices.
-5) To view the list of products and the total sum, select the **2** function in the main menu *(after entering the products)*.
-6) 🌠 ENJOY =)
+4) 👷 Choose the first function by inserting **1**, then enter the number of products, product names and prices.
+5) 🌠 To view the list of products and the total sum, select the **2** function in the main menu *(after entering the products)*.
+6) :heavy_dollar_sign: Enjoy =)
