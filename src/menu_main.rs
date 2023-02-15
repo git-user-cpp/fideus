@@ -18,10 +18,10 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 */
 
-use colored::*;
+use colored::Colorize;
 
 //main menu function
 pub fn show_menu() {
-    println!(" {}\n{}    {}    {}\n {}\n{}   Choose an option:   {}\n{}  {}  {}\n{}  {}  {}\n{} {} {}\n{}  {}             {}\n {}\n",
-"-----------------------".blue(), "|".blue(),"Finance manager".yellow(), "|".blue(), "-----------------------".blue(), "|".blue(), "|".blue(), "|".blue(), "[1] Insert products".green(), "|".blue(), "|".blue(), "[2] Show total sum ".green(), "|".blue(), "|".blue(), " [3] Show percentage ".green(), "|".blue(), "|".blue(), "[0] Exit".red(), "|".blue(), "-----------------------".blue());
+    println!(" {}\n{}    {}    {}\n {}\n{}   Choose an option:   {}\n{}  {}  {}\n{}  {}  {}\n{} {} {}\n{}  {}             {}\n {}\n{}",
+"-----------------------".blue(), "|".blue(),"Finance manager".yellow(), "|".blue(), "-----------------------".blue(), "|".blue(), "|".blue(), "|".blue(), "[1] Insert products".green(), "|".blue(), "|".blue(), "[2] Show total sum ".green(), "|".blue(), "|".blue(), " [3] Show percentage ".green(), "|".blue(), "|".blue(), "[0] Exit".red(), "|".blue(), "-----------------------".blue(), "> Your choise:".red());
 }

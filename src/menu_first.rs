@@ -18,7 +18,7 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 */
 use crate::Product;
-use colored::*;
+use colored::Colorize;
 
 //function for showing the first menu option
 pub fn show_first_option() {

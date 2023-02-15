@@ -19,7 +19,7 @@ SOFTWARE.
 */
 
 use crate::Product;
-use colored::*;
+use colored::Colorize;
 
 //function for showing the second menu option
 pub fn show_second_option() {
@@ -27,7 +27,7 @@ pub fn show_second_option() {
 }
 
 //function for running the second menu option
-pub fn run_second_option(products: &Vec<Product>) {
+pub fn run_second_option(products: &Vec<Product>, sum: &mut f64) {
     crate::options::show_list(products);
-    crate::options::count_total_sum(products);
+    crate::options::count_total_sum(products, sum);
 }
