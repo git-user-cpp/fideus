@@ -18,7 +18,7 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 */
 
-use std::collections::HashMap;
+use crate::Product;
 use colored::*;
 
 //function for showing the second menu option
@@ -27,7 +27,7 @@ pub fn show_second_option() {
 }
 
 //function for running the second menu option
-pub fn run_second_option(products: &HashMap<String, String>) {
+pub fn run_second_option(products: &Vec<Product>) {
     crate::options::show_list(products);
     crate::options::count_total_sum(products);
 }

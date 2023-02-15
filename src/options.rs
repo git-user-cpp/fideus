@@ -19,8 +19,8 @@ SOFTWARE.
 */
 
 use std::io;
-use std::collections::HashMap;
 use colored::*;
+use crate::Product;
 
 //function for choosing an option
 pub fn make_choise() -> String {
@@ -43,21 +43,20 @@ pub fn read_product(tmp: &mut String) -> String {
 }
 
 //function for showing the list of products
-pub fn show_list(products: &HashMap<String, String>) {
-    for (name, price) in products {
-        println!(" {}\n {} {} {}","-----------------------".red(), name, price, "-----------------------".red());
+pub fn show_list(products: &Vec<Product>) {
+    for element in products {
+        println!(" {}\n {} {} {}","-----------------------".red(), element.name, element.price, "\n -----------------------".red());
     }
 }
 
 //function for counting total sum
-pub fn count_total_sum(products: &HashMap<String, String>) {
+pub fn count_total_sum(products: &Vec<Product>) {
     //variable for total sum
     let mut sum: f64 = 0.0;
 
     //counting total sum
-    for (name, price) in products {
-        let price: f64 = price.trim().parse().expect("Enter a number");
-        sum += price;
+    for element in products {
+        sum += element.price;
     }
 
     println!(" {} {}\n {}", "Total sum =".yellow(), sum, "-----------------------".red());
