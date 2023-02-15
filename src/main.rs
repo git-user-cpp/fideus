@@ -18,6 +18,7 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 */
 
+use colored::Colorize;
 mod menu_main;
 mod menu_first;
 mod menu_second;
@@ -31,7 +32,7 @@ pub struct Product {
 
 fn main() {
     
-    //hashmap for holding products data
+    //vector for holding products data
     let mut products_list: Vec<Product> = Vec::new();
 
     //loop for main menu
@@ -58,12 +59,16 @@ fn main() {
             menu_first::show_first_option();
             menu_first::run_first_option(&mut products_list);
         }else if choise == 2 {
+            //variable for total sum
+            let mut total_sum: f64 = 0.0;
+
             //running the second option
             menu_second::show_second_option();
-            menu_second::run_second_option(&products_list);
+            menu_second::run_second_option(&products_list, &mut total_sum);
         }else if choise == 3 {
             //running the third option
             menu_third::show_third_option();
         }
     }
+    println!(" {}\n{} {} {}\n {}", "------------------------".red(), "|".red(), "The program is stopped".green(), "|".red(), "------------------------".red());
 }

@@ -18,7 +18,7 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 */
 
-use colored::*;
+use colored::Colorize;
 
 //function for showing the third menu option
 pub fn show_third_option() {
