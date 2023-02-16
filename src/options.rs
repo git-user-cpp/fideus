@@ -45,7 +45,7 @@ pub fn read_product(tmp: &mut String) -> String {
 //function for showing the list of products
 pub fn show_list(products: &Vec<product::Product>) {
     for element in products {
-        println!(" {}\n product: {} price: {} {}","-----------------------".red(), element.name, element.price, "\n -----------------------".red());
+        println!(" {}\n Product: {} Price: {} {}","-----------------------------------------".red(), element.name, element.price, "\n -----------------------------------------".red());
     }
 }
 
@@ -56,5 +56,11 @@ pub fn count_total_sum(products: &Vec<product::Product>, sum: &mut f64) {
         *sum += element.price;
     }
 
-    println!(" {} {}\n {}", "Total sum =".yellow(), sum, "-----------------------".red());
+    //printing total sum
+    println!(" {}\n {} {}\n {}", "-----------------------------------------".red(), "Total sum =".yellow(), sum, "-----------------------------------------".red());
+
+    //counting percentage
+    for element in products {
+        println!(" {}\n Product: {}\n Price: {}\n Percentage of the purchase: {}%\n {}", "-----------------------------------------".red(), element.name, element.price, (element.price * 100.0) / *sum, "\n -----------------------------------------".red());
+    }
 }
