@@ -1,4 +1,4 @@
-# Finance manager v1.0.0
+# Finance manager v1.0.1
 :heavy_dollar_sign: Simple finance manager :heavy_dollar_sign:
 
 ## ⚠️ LICENSE ⚠️
