@@ -23,7 +23,7 @@ use colored::Colorize;
 
 //function for showing the first menu option
 pub fn show_first_option() {
-   println!(" {}\n{}    {}    {}\n {}", "-----------------------".blue(), "|".blue(), "Insert products".green(), "|".blue(), "-----------------------".blue()); 
+   println!(" {}\n{}    {}    {}\n {}", "-----------------------------------------".blue(), "|".blue(), "         Insert products         ".green(), "|".blue(), "-----------------------------------------".blue()); 
 }
 
 //function for running the first option
@@ -43,14 +43,14 @@ pub fn run_first_option(products: &mut Vec<product::Product>) {
             let mut name = String::new();
             let mut price = String::new();
 
-            println!(" {}","-----------------------".red());
+            println!(" {}","-----------------------------------------".red());
             println!("{} {} {} {}{}", "> Input".red(), i+1, "product".red(), "name".yellow(), ":".red());
             let new_name = options::read_product(&mut name);
             println!("{} {} {} {}{}", "> Input".red(), i+1, "product".red(), "price".yellow(), ":".red());
             let new_price = options::read_product(&mut price);
-            println!(" {}","-----------------------".red());
+            println!(" {}","-----------------------------------------".red());
 
-            let new_price: f64 = new_price.trim().parse().expect("Failed to convert");
+            let new_price: f64 = new_price.trim().parse().expect("Wrong input! You have to input price! Example: 12.50");
 
             let prod: product::Product = product::Product {
                 name: new_name,
