@@ -24,16 +24,12 @@ mod menu_first;
 mod menu_second;
 mod menu_third;
 mod options;
-
-pub struct Product {
-    name: String,
-    price: f64,
-}
+mod product;
 
 fn main() {
     
     //vector for holding products data
-    let mut products_list: Vec<Product> = Vec::new();
+    let mut products_list: Vec<product::Product> = Vec::new();
 
     //loop for main menu
     loop {

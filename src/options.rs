@@ -20,7 +20,7 @@ SOFTWARE.
 
 use std::io;
 use colored::Colorize;
-use crate::Product;
+use crate::product;
 
 //function for choosing an option
 pub fn make_choise() -> String {
@@ -43,14 +43,14 @@ pub fn read_product(tmp: &mut String) -> String {
 }
 
 //function for showing the list of products
-pub fn show_list(products: &Vec<Product>) {
+pub fn show_list(products: &Vec<product::Product>) {
     for element in products {
         println!(" {}\n product: {} price: {} {}","-----------------------".red(), element.name, element.price, "\n -----------------------".red());
     }
 }
 
 //function for counting total sum
-pub fn count_total_sum(products: &Vec<Product>, sum: &mut f64) {
+pub fn count_total_sum(products: &Vec<product::Product>, sum: &mut f64) {
     //counting total sum
     for element in products {
         *sum += element.price;
