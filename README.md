@@ -1,4 +1,6 @@
 # Finance manager v1.0.1
+![GitHub all releases](https://img.shields.io/github/downloads/git-user-cpp/finance_manager/total?color=%2300f00&label=Total%20number%20of%20downloads&logo=GitHub&logoColor=%23ff0000)
+
 :heavy_dollar_sign: Simple finance manager :heavy_dollar_sign:
 
 ## ⚠️ LICENSE ⚠️
