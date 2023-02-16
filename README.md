@@ -1,4 +1,4 @@
-# Finance manager v0.1.0
+# Finance manager v1.0.0
 :heavy_dollar_sign: Simple finance manager :heavy_dollar_sign:
 
 ## ⚠️ LICENSE ⚠️
@@ -36,5 +36,6 @@ SOFTWARE.
     cargo run
     ```
 4) 👷 Choose the first function by inserting **1**, then enter the number of products, product names and prices.
-5) 🌠 To view the list of products and the total sum, select the **2** function in the main menu *(after entering the products)*.
-6) :heavy_dollar_sign: Enjoy =)
+5) :ballot_box_with_check: To view the list of products, select the **2** function in the main menu *(after entering the products)*.
+6) 🌠 To view the total sum and percentage, select the **3** function in the main menu *(after entering the products)*.
+7) :heavy_dollar_sign: Enjoy =)
