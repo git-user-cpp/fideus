@@ -55,12 +55,14 @@ fn main() {
             menu_first::show_first_option();
             menu_first::run_first_option(&mut products_list);
         }else if choise == 2{
+            //running the second option
+            menu_second::show_second_option();
             menu_second::run_second_option(&products_list);
         }else if choise == 3 {
             //variable for total sum
             let mut total_sum: f64 = 0.0;
 
-            //running the second option
+            //running the third option
             menu_third::show_third_option();
             menu_third::run_third_option(&products_list, &mut total_sum);
         }
