@@ -17,7 +17,8 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 */
-use crate::Product;
+use crate::product;
+use crate::options;
 use colored::Colorize;
 
 //function for showing the first menu option
@@ -26,12 +27,12 @@ pub fn show_first_option() {
 }
 
 //function for running the first option
-pub fn run_first_option(products: &mut Vec<Product>) {
+pub fn run_first_option(products: &mut Vec<product::Product>) {
     loop {
         println!("{} {}", ">".red(), "Please input amount of your products:".green());
 
         //using options function to get user's input (yeah, I'm relatively lazy :D)
-        let amount = crate::options::make_choise();
+        let amount = options::make_choise();
         let amount: u32 = match amount.trim().parse() {
             Ok(num) => num,
             Err(_) => continue,
@@ -44,14 +45,14 @@ pub fn run_first_option(products: &mut Vec<Product>) {
 
             println!(" {}","-----------------------".red());
             println!("{} {} {} {}{}", "> Input".red(), i+1, "product".red(), "name".yellow(), ":".red());
-            let new_name = crate::options::read_product(&mut name);
+            let new_name = options::read_product(&mut name);
             println!("{} {} {} {}{}", "> Input".red(), i+1, "product".red(), "price".yellow(), ":".red());
-            let new_price = crate::options::read_product(&mut price);
+            let new_price = options::read_product(&mut price);
             println!(" {}","-----------------------".red());
 
             let new_price: f64 = new_price.trim().parse().expect("Failed to convert");
 
-            let prod: Product = Product {
+            let prod: product::Product = product::Product {
                 name: new_name,
                 price: new_price,
             };
