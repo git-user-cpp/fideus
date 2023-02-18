@@ -17,28 +17,31 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 */
-use crate::product;
-use crate::options;
+
+//For colored menu
 use colored::Colorize;
 
-//function for showing the first menu option
+use crate::product;
+use crate::options;
+
+//Function for showing the first menu option
 pub fn show_first_option() {
    println!(" {}\n{}    {}    {}\n {}", "-----------------------------------------".blue(), "|".blue(), "         Insert products         ".green(), "|".blue(), "-----------------------------------------".blue()); 
 }
 
-//function for running the first option
+//Function for running the first option
 pub fn run_first_option(products: &mut Vec<product::Product>) {
     loop {
         println!("{} {}", ">".red(), "Please input amount of your products:".green());
 
-        //using options function to get user's input (yeah, I'm relatively lazy :D)
+        //Using options function to get user's input (yeah, I'm relatively lazy :D)
         let amount = options::make_choise();
         let amount: u32 = match amount.trim().parse() {
             Ok(num) => num,
             Err(_) => continue,
         };
         
-        //input
+        //Input
         for i in 0..amount {
             let mut name = String::new();
             let mut price = String::new();
@@ -52,11 +55,13 @@ pub fn run_first_option(products: &mut Vec<product::Product>) {
 
             let new_price: f64 = new_price.trim().parse().expect("Wrong input! You have to input price! Example: 12.50");
 
+            //Creating new element for pushing into the vector
             let prod: product::Product = product::Product {
                 name: new_name,
                 price: new_price,
             };
-
+            
+            //Pushing the element
             products.push(prod);
         }
 
