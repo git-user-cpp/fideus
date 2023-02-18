@@ -18,16 +18,18 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 */
 
-use crate::product;
-use crate::options;
+//For colored menu
 use colored::Colorize;
 
-//function for showing the second menu option
+use crate::product;
+use crate::options;
+
+//Function for showing the second menu option
 pub fn show_third_option() {
    println!(" {}\n{} {} {}\n {}", "-----------------------------------------".blue(), "|".blue(), "   Show total sum & Show percentage    ".green(), "|".blue(), "-----------------------------------------".blue()); 
 }
 
-//function for running the second menu option
+//Function for running the second menu option
 pub fn run_third_option(products: &Vec<product::Product>, sum: &mut f64) {
     options::count_total_sum(products, sum);
 }

@@ -18,7 +18,10 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 */
 
+//For colored menu
 use colored::Colorize;
+
+//Modules
 mod menu_main;
 mod menu_first;
 mod menu_second;
@@ -28,18 +31,18 @@ mod product;
 
 fn main() {
     
-    //vector for holding products data
+    //Vector for holding products data
     let mut products_list: Vec<product::Product> = Vec::new();
 
-    //loop for main menu
+    //Loop for main menu
     loop {
-        //main menu call
+        //Main menu call
         menu_main::show_menu();
 
-        //choosing an option
+        //Choosing an option
         let choise = options::make_choise();
 
-        //checks if input is correct
+        //Checks if input is correct
         let choise: u8 = match choise.trim().parse() {
             Ok(0) => break,
             Ok(1) => 1,
@@ -49,24 +52,25 @@ fn main() {
             Ok(i32::MIN..=-1_i32) | Ok(3_i32..=i32::MAX) => continue,
         };
 
-        //checks which option to show
+        //Checks which option to show
         if choise == 1 {
-            //running the first option
+            //Running the first option
             menu_first::show_first_option();
             menu_first::run_first_option(&mut products_list);
         }else if choise == 2{
-            //running the second option
+            //Running the second option
             menu_second::show_second_option();
             menu_second::run_second_option(&products_list);
         }else if choise == 3 {
-            //variable for total sum
+            //Variable for total sum
             let mut total_sum: f64 = 0.0;
 
-            //running the third option
+            //Running the third option
             menu_third::show_third_option();
             menu_third::run_third_option(&products_list, &mut total_sum);
         }
     }
 
+    //Info about stopping the program
     println!(" {}\n{}          {}         {}\n {}", "-----------------------------------------".red(), "|".red(), "The program is stopped".green(), "|".red(), "-----------------------------------------".red());
 }

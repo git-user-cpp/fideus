@@ -18,11 +18,15 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 */
 
-use std::io;
+//For colored menu
 use colored::Colorize;
+
+//For standart I/O
+use std::io;
+
 use crate::product;
 
-//function for choosing an option
+//Function for choosing an option
 pub fn make_choise() -> String {
     let mut choise = String::new();
 
@@ -33,7 +37,7 @@ pub fn make_choise() -> String {
     choise
 }
 
-//function for input products
+//Function for input products
 pub fn read_product(tmp: &mut String) -> String {
     io::stdin()
         .read_line(tmp)
@@ -42,24 +46,24 @@ pub fn read_product(tmp: &mut String) -> String {
     tmp.to_string()
 }
 
-//function for showing the list of products
+//Function for showing the list of products
 pub fn show_list(products: &Vec<product::Product>) {
     for element in products {
         println!(" {}\n Product: {} Price: {} {}","-----------------------------------------".red(), element.name, element.price, "\n -----------------------------------------".red());
     }
 }
 
-//function for counting total sum
+//Function for counting total sum
 pub fn count_total_sum(products: &Vec<product::Product>, sum: &mut f64) {
-    //counting total sum
+    //Counting total sum
     for element in products {
         *sum += element.price;
     }
 
-    //printing total sum
+    //Printing total sum
     println!(" {}\n {} {}\n {}", "-----------------------------------------".red(), "Total sum =".yellow(), sum, "-----------------------------------------".red());
 
-    //counting percentage
+    //Counting percentage
     for element in products {
         println!(" {}\n Product: {}\n Price: {}\n Percentage of the purchase (%) : {}%\n {}", "-----------------------------------------".red(), element.name, element.price, (element.price * 100.0) / *sum, "\n -----------------------------------------".red());
     }
