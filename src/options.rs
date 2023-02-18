@@ -61,6 +61,6 @@ pub fn count_total_sum(products: &Vec<product::Product>, sum: &mut f64) {
 
     //counting percentage
     for element in products {
-        println!(" {}\n Product: {}\n Price: {}\n Percentage of the purchase: {}%\n {}", "-----------------------------------------".red(), element.name, element.price, (element.price * 100.0) / *sum, "\n -----------------------------------------".red());
+        println!(" {}\n Product: {}\n Price: {}\n Percentage of the purchase (%) : {}%\n {}", "-----------------------------------------".red(), element.name, element.price, (element.price * 100.0) / *sum, "\n -----------------------------------------".red());
     }
 }
