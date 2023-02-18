@@ -18,8 +18,11 @@
 ![GitHub commit activity](https://img.shields.io/github/commit-activity/y/git-user-cpp/finance_manager?color=98FB98&label=Commit%20activity&logo=GitHub&logoColor=98FB98&style=plastic)
 ![GitHub last commit](https://img.shields.io/github/last-commit/git-user-cpp/finance_manager?color=98FB98&label=Last%20commit&logo=GitHub&logoColor=98FB98&style=plastic)
 
-#
+---
+
 :heavy_dollar_sign: Simple finance manager :heavy_dollar_sign:
+
+---
 
 ## ⚠️ LICENSE ⚠️
 MIT License
@@ -44,6 +47,8 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
+---
+
 ## 💻 How to use this app 💻
 
 1) ⚠️ **The application is designed for Linux, so avoid using other systems or remake the program to avoid bugs.** ⚠️
@@ -59,3 +64,5 @@ SOFTWARE.
 5) :ballot_box_with_check: To view the list of products, select the **2** function in the main menu *(after entering the products)*.
 6) 🌠 To view the total sum and percentage, select the **3** function in the main menu *(after entering the products)*.
 7) :heavy_dollar_sign: Enjoy =)
+
+---
