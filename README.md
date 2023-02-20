@@ -67,12 +67,12 @@ SOFTWARE.
 
 ---
 
-##  How to use tests
+## :question: How to use tests :question:
 
-1) When you've already downloaded the program and you wanna test it use this command:
+1) :small_red_triangle: When you've already downloaded the program and you wanna test it, use this command:
 ```
 cargo test -- --nocapture
 ```
-Note that while using **cargo test** without **-- --nocapture** you won't see standart output.
+- ⚠️ Note that while using **cargo test** without **-- --nocapture** you won't see standart output.
 
 ---
