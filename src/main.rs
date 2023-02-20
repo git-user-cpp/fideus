@@ -22,12 +22,12 @@ SOFTWARE.
 use colored::Colorize;
 
 //Modules
+mod product;
 mod menu_main;
+mod options;
 mod menu_first;
 mod menu_second;
 mod menu_third;
-mod options;
-mod product;
 
 fn main() {
     
