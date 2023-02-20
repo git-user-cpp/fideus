@@ -1,4 +1,4 @@
-# Finance manager v1.0.2
+# Finance manager v1.0.3
 
 ![GitHub all releases](https://img.shields.io/github/downloads/git-user-cpp/finance_manager/total?color=00FF00&label=Downloads&logo=GitHub&logoColor=00FF00&style=plastic)
 ![GitHub Repo stars](https://img.shields.io/github/stars/git-user-cpp/finance_manager?color=FFFF00&label=Stars&logo=GitHub&logoColor=FFFF00&style=plastic)
@@ -64,5 +64,15 @@ SOFTWARE.
 5) :ballot_box_with_check: To view the list of products, select the **2** function in the main menu *(after entering the products)*.
 6) 🌠 To view the total sum and percentage, select the **3** function in the main menu *(after entering the products)*.
 7) :heavy_dollar_sign: Enjoy =)
+
+---
+
+##  How to use tests
+
+1) When you've already downloaded the program and you wanna test it use this command:
+```
+cargo test -- --nocapture
+```
+Note that while using **cargo test** without **-- --nocapture** you won't see standart output.
 
 ---
