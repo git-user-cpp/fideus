@@ -23,7 +23,15 @@ use finance_manager::options;
 //Test for checking make_choise function
 #[test]
 fn test_make_choise() {
-    println!("Write digit 1 to pass the test:");
-    
+    println!("Write digit '1' to pass the test:");
     assert_eq!(options::make_choise(), "1\n");
+
+    println!("Write digit '2' to pass the test:");
+    assert_eq!(options::make_choise(), "2\n");
+
+    println!("Write digit '3' to pass the test:");
+    assert_eq!(options::make_choise(), "3\n");
+
+    println!("Write digit '0' to pass the test:");
+    assert_eq!(options::make_choise(), "0\n");
 }
