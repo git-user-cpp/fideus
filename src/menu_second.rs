@@ -26,7 +26,12 @@ use crate::product;
 
 //Function for showing the second option
 pub fn show_second_option() {
-    println!(" {}\n{}    {}    {}\n {}", "-----------------------------------------".blue(), "|".blue(), "         List of products        ".green(), "|".blue(), "-----------------------------------------".blue());
+    println!(" {}\n{}    {}    {}\n {}",
+             "-----------------------------------------".blue(),
+             "|".blue(),
+             "         List of products        ".green(),
+             "|".blue(),
+             "-----------------------------------------".blue());
 }
 
 //Function for running the second option

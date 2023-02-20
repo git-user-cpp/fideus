@@ -26,7 +26,12 @@ use crate::options;
 
 //Function for showing the first menu option
 pub fn show_first_option() {
-   println!(" {}\n{}    {}    {}\n {}", "-----------------------------------------".blue(), "|".blue(), "         Insert products         ".green(), "|".blue(), "-----------------------------------------".blue()); 
+   println!(" {}\n{}    {}    {}\n {}",
+            "-----------------------------------------".blue(),
+            "|".blue(),
+            "         Insert products         ".green(),
+            "|".blue(),
+            "-----------------------------------------".blue()); 
 }
 
 //Function for running the first option
@@ -53,7 +58,9 @@ pub fn run_first_option(products: &mut Vec<product::Product>) {
             let new_price = options::read_product(&mut price);
             println!(" {}","-----------------------------------------".red());
 
-            let new_price: f64 = new_price.trim().parse().expect("Wrong input! You have to input price! Example: 12.50");
+            let new_price: f64 = new_price.trim()
+                .parse()
+                .expect("Wrong input! You have to input price! Example: 12.50");
 
             //Creating new element for pushing into the vector
             let prod: product::Product = product::Product {

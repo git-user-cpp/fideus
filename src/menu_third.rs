@@ -26,7 +26,12 @@ use crate::options;
 
 //Function for showing the second menu option
 pub fn show_third_option() {
-   println!(" {}\n{} {} {}\n {}", "-----------------------------------------".blue(), "|".blue(), "   Show total sum & Show percentage    ".green(), "|".blue(), "-----------------------------------------".blue()); 
+   println!(" {}\n{} {} {}\n {}",
+            "-----------------------------------------".blue(),
+            "|".blue(),
+            "   Show total sum & Show percentage    ".green(),
+            "|".blue(),
+            "-----------------------------------------".blue()); 
 }
 
 //Function for running the second menu option
