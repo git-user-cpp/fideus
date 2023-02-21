@@ -35,3 +35,12 @@ fn test_make_choise() {
     println!("Write digit '0' to pass the test:");
     assert_eq!(options::make_choise(), "0\n");
 }
+
+//Test for checking read_product function
+#[test]
+fn test_read_product() {
+    let mut string: String = String::new();
+
+    println!("Write 'product' to pass the test:");
+    assert_eq!(options::read_product(&mut string), "product\n");
+}
