@@ -20,6 +20,11 @@ SOFTWARE.
 
 use finance_manager::options;
 
+/*
+    TO AVOID MISTAKES YOU SHOULD
+    RUN TESTS VIA cargo test -- --test-threads 1 --nocapture
+*/
+
 //Test for checking make_choise function
 #[test]
 fn test_make_choise() {
