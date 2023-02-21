@@ -71,7 +71,7 @@ SOFTWARE.
 
 1) :small_red_triangle: When you've already downloaded the program and you wanna test it, use this command:
 ```
-cargo test -- --nocapture
+cargo test -- --test-threads 1 --nocapture
 ```
 - ⚠️ Note that while using **cargo test** without **-- --nocapture** you won't see standart output.
 
