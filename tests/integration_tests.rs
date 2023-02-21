@@ -21,7 +21,7 @@ SOFTWARE.
 use finance_manager::options;
 
 /*
-    TO AVOID MISTAKES YOU SHOULD
+    TO AVOID ERRORS YOU SHOULD
     RUN TESTS VIA cargo test -- --test-threads 1 --nocapture
 */
 
