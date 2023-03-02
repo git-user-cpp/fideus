@@ -48,25 +48,18 @@ pub fn run_first_option(products: &mut Vec<product::Product>) {
         
         //Input
         for i in 0..amount {
-            let mut name = String::new();
-            let mut price = String::new();
+            //let mut name = String::new();
+            //let mut price = String::new();
 
             println!(" {}","-----------------------------------------".red());
             println!("{} {} {} {}{}", "> Input".red(), i+1, "product".red(), "name".yellow(), ":".red());
-            let new_name = options::read_product(&mut name);
+            let name = options::read_product();
             println!("{} {} {} {}{}", "> Input".red(), i+1, "product".red(), "price".yellow(), ":".red());
-            let new_price = options::read_product(&mut price);
+            let price = options::read_product();
             println!(" {}","-----------------------------------------".red());
 
-            let new_price: f64 = new_price.trim()
-                .parse()
-                .expect("Wrong input! You have to input price! Example: 12.50");
-
-            //Creating new element for pushing into the vector
-            let prod: product::Product = product::Product {
-                name: new_name,
-                price: new_price,
-            };
+            //Creating new struct to push
+            let prod = product::Product::new(name, price);
             
             //Pushing the element
             products.push(prod);

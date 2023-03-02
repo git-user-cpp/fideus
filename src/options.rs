@@ -38,9 +38,11 @@ pub fn make_choise() -> String {
 }
 
 //Function for input products
-pub fn read_product(tmp: &mut String) -> String {
+pub fn read_product() -> String {
+    let mut tmp = String::new();
+
     io::stdin()
-        .read_line(tmp)
+        .read_line(&mut tmp)
         .expect("failed to read line");
 
     tmp.to_string()
