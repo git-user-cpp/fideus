@@ -1,6 +1,6 @@
 /*
 MIT License
-Copyright (c) 2023 m!haly4
+Copyright (c) 2023 Andrew Kushyk
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
 in the Software without restriction, including without limitation the rights
@@ -18,10 +18,9 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 */
 
-//For colored menu
 use colored::Colorize;
 
-//Modules
+///Modules
 mod product;
 mod menu_main;
 mod options;
@@ -30,19 +29,13 @@ mod menu_second;
 mod menu_third;
 
 fn main() {
-    
-    //Vector for holding products data
     let mut products_list: Vec<product::Product> = Vec::new();
 
-    //Loop for main menu
     loop {
-        //Main menu call
         menu_main::show_menu();
 
-        //Choosing an option
         let choise = options::make_choise();
 
-        //Checks if input is correct
         let choise: u8 = match choise.trim().parse() {
             Ok(0) => break,
             Ok(1) => 1,
@@ -52,26 +45,35 @@ fn main() {
             Ok(i32::MIN..=-1_i32) | Ok(3_i32..=i32::MAX) => continue,
         };
 
-        //Checks which option to show
         if choise == 1 {
-            //Running the first option
             menu_first::show_first_option();
             menu_first::run_first_option(&mut products_list);
         }else if choise == 2{
-            //Running the second option
             menu_second::show_second_option();
             menu_second::run_second_option(&products_list);
         }else if choise == 3 {
-            //Variable for total sum
             let mut total_sum: f64 = 0.0;
 
-            //Running the third option
             menu_third::show_third_option();
             menu_third::run_third_option(&products_list, &mut total_sum);
+
+            println!(" {}\n {} {}\n {}",
+                     "-----------------------------------------".red(),
+                     "Total sum =".yellow(),
+                     total_sum,
+                     "-----------------------------------------".red());
+
+            for element in &products_list {
+                println!(" {}\n Product: {}\n Price: {}\n Percentage of the purchase (%) : {}%\n {}",
+                "-----------------------------------------".red(),
+                element.name,
+                element.price,
+                (element.price * 100.0) / total_sum,
+                "\n -----------------------------------------".red());
+            }
         }
     }
 
-    //Info about stopping the program
     println!(" {}\n{}          {}         {}\n {}",
              "-----------------------------------------".red(),
              "|".red(),
