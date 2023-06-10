@@ -18,25 +18,38 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 */
 
-use colored::Colorize;
+///Module for using this program via console/terminal
+mod console;
 
-///Modules
-mod product;
-mod menu_main;
+mod product_structure;
 mod options;
-mod menu_first;
-mod menu_second;
-mod menu_third;
+
+use crate::console::console_menu::{print_menu,
+                                   print_first_option,
+                                   print_second_option,
+                                   print_third_option,
+                                   print_stop_message,
+                                   print_total_sum};
+
+
+use crate::options::menu_options::{run_first_option,
+                                   run_second_option,
+                                   run_third_option};
+
+use crate::options::general_options::{make_choise,
+                                      percentage};
+
+use crate::product_structure::product;
 
 fn main() {
     let mut products_list: Vec<product::Product> = Vec::new();
 
     loop {
-        menu_main::show_menu();
+        print_menu();
 
-        let choise = options::make_choise();
+        let choice = make_choise();
 
-        let choise: u8 = match choise.trim().parse() {
+        let choice: u8 = match choice.trim().parse() {
             Ok(0) => break,
             Ok(1) => 1,
             Ok(2) => 2,
@@ -45,39 +58,23 @@ fn main() {
             Ok(i32::MIN..=-1_i32) | Ok(3_i32..=i32::MAX) => continue,
         };
 
-        if choise == 1 {
-            menu_first::show_first_option();
-            menu_first::run_first_option(&mut products_list);
-        }else if choise == 2{
-            menu_second::show_second_option();
-            menu_second::run_second_option(&products_list);
-        }else if choise == 3 {
+        if choice == 1 {
+            print_first_option();
+            run_first_option(&mut products_list);
+        }else if choice == 2{
+            print_second_option();
+            run_second_option(&products_list);
+        }else if choice == 3 {
             let mut total_sum: f64 = 0.0;
 
-            menu_third::show_third_option();
-            menu_third::run_third_option(&products_list, &mut total_sum);
+            print_third_option();
+            run_third_option(&products_list, &mut total_sum);
 
-            println!(" {}\n {} {}\n {}",
-                     "-----------------------------------------".red(),
-                     "Total sum =".yellow(),
-                     total_sum,
-                     "-----------------------------------------".red());
+            print_total_sum(&total_sum);
 
-            for element in &products_list {
-                println!(" {}\n Product: {}\n Price: {}\n Percentage of the purchase (%) : {}%\n {}",
-                "-----------------------------------------".red(),
-                element.name,
-                element.price,
-                (element.price * 100.0) / total_sum,
-                "\n -----------------------------------------".red());
-            }
+            percentage(&products_list, total_sum);
         }
     }
 
-    println!(" {}\n{}          {}         {}\n {}",
-             "-----------------------------------------".red(),
-             "|".red(),
-             "The program is stopped".green(),
-             "|".red(),
-             "-----------------------------------------".red());
+    print_stop_message();
 }

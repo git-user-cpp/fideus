@@ -18,23 +18,22 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 */
 
-//For colored menu
-use colored::Colorize;
-
-use crate::product;
-use crate::options;
-
-//Function for showing the second menu option
-pub fn show_third_option() {
-   println!(" {}\n{} {} {}\n {}",
-            "-----------------------------------------".blue(),
-            "|".blue(),
-            "   Show total sum & Show percentage    ".green(),
-            "|".blue(),
-            "-----------------------------------------".blue()); 
+///Structure of the product
+pub struct Product {
+    pub name: String,
+    pub price: f64,
 }
 
-//Function for running the second menu option
-pub fn run_third_option(products: &Vec<product::Product>, sum: &mut f64) {
-    options::count_total_sum(products, sum);
+///Implementation block for product
+impl Product {
+    pub fn new(name: String, price: String) -> Product {
+        let float_price: f64 = price.trim()
+                .parse()
+                .expect("Wrong input! You have to input price! Example: 12.50");
+
+        Product {
+            name,
+            price: float_price,
+        }
+    }
 }

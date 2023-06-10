@@ -18,25 +18,4 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 */
 
-//Structure of the product
-pub struct Product {
-    pub name: String,
-    pub price: f64,
-}
-
-//Implementation block for product
-impl Product {
-    //Constructor
-    pub fn new(name: String, price: String) -> Product {
-        //Converting a price from 'String' to 'f64' type
-        let float_price: f64 = price.trim()
-                .parse()
-                .expect("Wrong input! You have to input price! Example: 12.50");
-
-        //Return object
-        Product {
-            name,
-            price: float_price,
-        }
-    }
-}
+pub(crate) mod console_menu;

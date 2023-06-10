@@ -18,32 +18,5 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 */
 
-//For colored menu
-use colored::Colorize;
-
-//Main menu function
-pub fn show_menu() {
-    println!(" {}\n{}             {}             {}\n {}\n{}            Choose an option:            {}\n{}           {}           {}\n{}             {}               {}\n{}  {}  {}\n{}           {}                      {}\n {}\n{}",
-"-----------------------------------------".blue(),
-"|".blue(),
-"Finance manager".yellow(),
-"|".blue(),
-"-----------------------------------------".blue(),
-"|".blue(),
-"|".blue(),
-"|".blue(),
-"[1] Insert products".green(),
-"|".blue(),
-"|".blue(),
-"[2] Show list".green(),
-"|".blue(),
-"|".blue(),
-"[3] Show total sum & Show percentage ".green(),
-"|".blue(),
-"|".blue(),
-"[0] Exit".red(),
-"|".blue(),
-"-----------------------------------------".blue(),
-"> Your choise:".red());
-
-}
+pub(crate) mod menu_options;
+pub(crate) mod general_options;
