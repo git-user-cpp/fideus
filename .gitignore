@@ -1,5 +1,6 @@
 /target
 /.git
+/.idea
 src/.main.rs.swp
 src/.menu_first.rs.swp
 src/.menu_main.rs.swp
