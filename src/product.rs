@@ -35,7 +35,7 @@ impl Product {
 
         //Return object
         Product {
-            name: name,
+            name,
             price: float_price,
         }
     }
