@@ -68,3 +68,22 @@ pub fn percentage(products_list: &Vec<Product>, total_sum: f64) {
 		print_percentage(element, &total_sum);
 	}
 }
+
+//TESTS
+
+#[cfg(test)]
+mod tests {
+	use super::*;
+
+	#[test]
+	fn test_make_choise() {
+		println!("Enter \"1\" to pass the test");
+		assert_eq!("1\n", make_choise());
+		println!("Enter \"2\" to pass the test");
+		assert_eq!("2\n", make_choise());
+		println!("Enter \"3\" to pass the test");
+		assert_eq!("3\n", make_choise());
+		println!("Enter \"0\" to pass the test");
+		assert_eq!("0\n", make_choise());
+	}
+}
