@@ -24,6 +24,7 @@ use crate::product;
 use crate::product::Product;
 
 ///Function for printing main menu
+
 pub fn print_menu() {
 	println!(" {}\n{}             {}             {}\n {}\n{}            Choose an option:            {}\n{}           {}           {}\n{}             {}               {}\n{}  {}  {}\n{}           {}                      {}\n {}\n{}",
 	         "-----------------------------------------".blue(),
@@ -51,6 +52,7 @@ pub fn print_menu() {
 }
 
 ///Function for printing the first menu option
+
 pub fn print_first_option() {
 	println!(" {}\n{}    {}    {}\n {}",
 	         "-----------------------------------------".blue(),
@@ -62,6 +64,7 @@ pub fn print_first_option() {
 }
 
 ///Function for printing the second option
+
 pub fn print_second_option() {
 	println!(" {}\n{}    {}    {}\n {}",
 	         "-----------------------------------------".blue(),
@@ -73,6 +76,7 @@ pub fn print_second_option() {
 }
 
 ///Function for printing the third menu option
+
 pub fn print_third_option() {
 	println!(" {}\n{} {} {}\n {}",
 	         "-----------------------------------------".blue(),
@@ -84,6 +88,7 @@ pub fn print_third_option() {
 }
 
 ///Function for printing the list of products
+
 pub fn print_list(products: &Vec<product::Product>) {
 	for element in products {
 		println!(" {}\n Product: {} Price: {} {}",
@@ -96,6 +101,7 @@ pub fn print_list(products: &Vec<product::Product>) {
 }
 
 ///Function for printing a stop message
+
 pub fn print_stop_message() {
 	println!(" {}\n{}          {}         {}\n {}",
 	         "-----------------------------------------".red(),
@@ -107,6 +113,7 @@ pub fn print_stop_message() {
 }
 
 ///Function for printing total sum
+
 pub fn print_total_sum(total_sum: &f64) {
 	println!(" {}\n {} {}\n {}",
 	         "-----------------------------------------".red(),
@@ -117,6 +124,7 @@ pub fn print_total_sum(total_sum: &f64) {
 }
 
 ///Function for printing percentage
+
 pub fn print_percentage(element: &Product, total_sum: &f64) {
 	println!(" {}\n Product: {}\n Price: {}\n Percentage of the purchase (%) : {}%\n {}",
 	         "-----------------------------------------".red(),
@@ -128,22 +136,26 @@ pub fn print_percentage(element: &Product, total_sum: &f64) {
 }
 
 ///Function for printing input message
+
 pub fn print_inp_message() {
 	println!("{} {}", ">".red(), "Please input amount of your products:".green());
 }
 
 ///Function for printing top border
+
 pub fn print_top_border(i: &u32) {
-	println!(" {}","-----------------------------------------".red());
-	println!("{} {} {} {}{}", "> Input".red(), i+1, "product".red(), "name".yellow(), ":".red());
+	println!(" {}", "-----------------------------------------".red());
+	println!("{} {} {} {}{}", "> Input".red(), i + 1, "product".red(), "name".yellow(), ":".red());
 }
 
 ///Function for printing border
+
 pub fn print_mid_border(i: &u32) {
-	println!("{} {} {} {}{}", "> Input".red(), i+1, "product".red(), "price".yellow(), ":".red());
+	println!("{} {} {} {}{}", "> Input".red(), i + 1, "product".red(), "price".yellow(), ":".red());
 }
 
 ///Function for printing bottom border
+
 pub fn print_bot_border() {
-	println!(" {}","-----------------------------------------".red());
+	println!(" {}", "-----------------------------------------".red());
 }

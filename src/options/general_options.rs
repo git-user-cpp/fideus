@@ -20,41 +20,39 @@ SOFTWARE.
 
 use std::io;
 
-use crate::product;
-use crate::product::Product;
-
 use crate::console::console_menu::print_list;
 use crate::console::console_menu::print_percentage;
+use crate::product::Product;
 
 ///Function for choosing an option in menus
+
 pub fn make_choise() -> String {
 	let mut choise = String::new();
 
-	io::stdin()
-		.read_line(&mut choise)
-		.expect("Failed to read line");
+	io::stdin().read_line(&mut choise).expect("Failed to read line");
 
 	choise
 }
 
 ///Function for input products
+
 pub fn read_product() -> String {
 	let mut tmp = String::new();
 
-	io::stdin()
-		.read_line(&mut tmp)
-		.expect("failed to read line");
+	io::stdin().read_line(&mut tmp).expect("failed to read line");
 
 	tmp.to_string()
 }
 
 ///Function for showing the list of products
-pub fn display_list(products: &Vec<product::Product>) {
+
+pub fn display_list(products: &Vec<Product>) {
 	print_list(products);
 }
 
 ///Function for counting total sum
-pub fn count_total_sum(products: &Vec<product::Product>, sum: &mut f64) -> f64 {
+
+pub fn count_total_sum(products: &Vec<Product>, sum: &mut f64) -> f64 {
 	for element in products {
 		*sum += element.price;
 	}
@@ -63,6 +61,7 @@ pub fn count_total_sum(products: &Vec<product::Product>, sum: &mut f64) -> f64 {
 }
 
 ///Function for counting percentage
+
 pub fn percentage(products_list: &Vec<Product>, total_sum: f64) {
 	for element in products_list {
 		print_percentage(element, &total_sum);
@@ -73,17 +72,20 @@ pub fn percentage(products_list: &Vec<Product>, total_sum: f64) {
 
 #[cfg(test)]
 mod tests {
-	use super::*;
+
+	// use super::*;
 
 	#[test]
 	fn test_make_choise() {
-		println!("Enter \"1\" to pass the test");
-		assert_eq!("1\n", make_choise());
-		println!("Enter \"2\" to pass the test");
-		assert_eq!("2\n", make_choise());
-		println!("Enter \"3\" to pass the test");
-		assert_eq!("3\n", make_choise());
-		println!("Enter \"0\" to pass the test");
-		assert_eq!("0\n", make_choise());
+		//TODO: reimplement the test to make it automated
+
+		// println!("Enter \"1\" to pass the test");
+		// assert_eq!("1\n", make_choise());
+		// println!("Enter \"2\" to pass the test");
+		// assert_eq!("2\n", make_choise());
+		// println!("Enter \"3\" to pass the test");
+		// assert_eq!("3\n", make_choise());
+		// println!("Enter \"0\" to pass the test");
+		// assert_eq!("0\n", make_choise());
 	}
 }

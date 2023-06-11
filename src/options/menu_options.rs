@@ -19,13 +19,14 @@ SOFTWARE.
 */
 
 use crate::console::console_menu::{print_bot_border,
+                                   print_inp_message,
                                    print_mid_border,
-                                   print_top_border,
-                                   print_inp_message};
-use crate::product;
+                                   print_top_border};
 use crate::options;
+use crate::product;
 
 ///Function for running the first option
+
 pub fn run_first_option(products: &mut Vec<product::Product>) {
 	loop {
 		print_inp_message();
@@ -37,7 +38,6 @@ pub fn run_first_option(products: &mut Vec<product::Product>) {
 		};
 
 		for i in 0..amount {
-
 			print_top_border(&i);
 			let name = options::general_options::read_product();
 			print_mid_border(&i);
@@ -54,11 +54,13 @@ pub fn run_first_option(products: &mut Vec<product::Product>) {
 }
 
 ///Function for running the second option
+
 pub fn run_second_option(products: &Vec<product::Product>) {
 	options::general_options::display_list(products);
 }
 
 ///Function for running the second menu option
+
 pub fn run_third_option(products: &Vec<product::Product>, sum: &mut f64) {
 	options::general_options::count_total_sum(products, sum);
 }
