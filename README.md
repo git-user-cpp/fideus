@@ -1,6 +1,6 @@
 # Finance manager v2.0.0
 
-[![Rust](https://github.com/git-user-cpp/finance_manager/actions/workflows/rust.yml/badge.svg?branch=main)](https://github.com/git-user-cpp/finance_manager/actions/workflows/rust.yml)
+[![Build Ubuntu](https://github.com/git-user-cpp/finance_manager/actions/workflows/CI_Ubuntu.yml/badge.svg?branch=main)](https://github.com/git-user-cpp/finance_manager/actions/workflows/CI_Ubuntu.yml)
 
 ![GitHub all releases](https://img.shields.io/github/downloads/git-user-cpp/finance_manager/total?color=00FF00&label=Downloads&logo=GitHub&logoColor=00FF00&style=plastic)
 ![GitHub Repo stars](https://img.shields.io/github/stars/git-user-cpp/finance_manager?color=FFFF00&label=Stars&logo=GitHub&logoColor=FFFF00&style=plastic)
