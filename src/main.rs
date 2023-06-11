@@ -18,6 +18,11 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 */
 
+//Module for using this program via console/terminal mod console; mod console;
+mod console;
+
+mod product_structure;
+mod options;
 
 use crate::console::console_menu::{print_first_option,
                                    print_menu,
@@ -31,12 +36,6 @@ use crate::options::menu_options::{run_first_option,
                                    run_second_option,
                                    run_third_option};
 use crate::product_structure::product;
-
-//Module for using this program via console/terminal mod console;
-mod console;
-
-mod product_structure;
-mod options;
 
 fn main() {
 	let mut products_list: Vec<product::Product> = Vec::new();
