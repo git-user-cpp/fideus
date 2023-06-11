@@ -25,6 +25,7 @@
 ---
 
 ## ⚠️ LICENSE ⚠️
+
 MIT License
 
 Copyright (c) 2023 Andrew Kushyk
@@ -61,7 +62,8 @@ SOFTWARE.
     cargo run
     ```
 4) 👷 Choose the first function by inserting **1**, then enter the number of products, product names and prices.
-5) :ballot_box_with_check: To view the list of products, select the **2** function in the main menu *(after entering the products)*.
+5) :ballot_box_with_check: To view the list of products, select the **2** function in the main menu *(after entering the
+   products)*.
 6) 🌠 To view the total sum and percentage, select the **3** function in the main menu *(after entering the products)*.
 7) :heavy_dollar_sign: Enjoy =)
 
@@ -70,9 +72,11 @@ SOFTWARE.
 ## :question: How to use tests :question:
 
 1) :small_red_triangle: When you've already downloaded the program and you wanna test it, use this command:
+
 ```
 cargo test -- --nocapture
 ```
+
 - ⚠️ Note that while using **cargo test** without **-- --nocapture** you won't see standart output.
 
 ---
