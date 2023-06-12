@@ -1,4 +1,4 @@
-# Finance manager v2.0.0
+# Finance manager v2.0.1
 
 [![Build Ubuntu](https://github.com/git-user-cpp/finance_manager/actions/workflows/CI_Ubuntu.yml/badge.svg?branch=main)](https://github.com/git-user-cpp/finance_manager/actions/workflows/CI_Ubuntu.yml)
 [![Build Windows](https://github.com/git-user-cpp/finance_manager/actions/workflows/CI_Windows.yml/badge.svg?branch=main)](https://github.com/git-user-cpp/finance_manager/actions/workflows/CI_Windows.yml)
