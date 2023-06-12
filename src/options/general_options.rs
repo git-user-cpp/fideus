@@ -16,13 +16,59 @@ Copyright 2023 Andrew Kushyk
 
 use std::io;
 
-use crate::console::console_menu::print_list;
+use crate::console::console_menu::{print_first_option,
+                                   print_list,
+                                   print_menu,
+                                   print_second_option,
+                                   print_third_option,
+                                   print_total_sum,
+                                   print_license};
 use crate::console::console_menu::print_percentage;
+use crate::options::menu_options::{run_first_option, run_second_option, run_third_option};
 use crate::product::Product;
+
+///Function for launching main menu in terminal
+
+pub fn launch_main_console_menu(mut products_list: Vec<Product>) {
+	loop {
+		print_menu();
+
+		let choice = make_choice();
+
+		let choice: u8 = match choice.trim().parse() {
+			Ok(0) => break,
+			Ok(1) => 1,
+			Ok(2) => 2,
+			Ok(3) => 3,
+			Ok(4) => 4,
+			Err(_) => continue,
+			Ok(i32::MIN..=-1_i32) | Ok(3_i32..=i32::MAX) => continue,
+		};
+
+		if choice == 1 {
+			print_first_option();
+			run_first_option(&mut products_list);
+		} else if choice == 2 {
+			print_second_option();
+			run_second_option(&products_list);
+		} else if choice == 3 {
+			let mut total_sum: f64 = 0.0;
+
+			print_third_option();
+			run_third_option(&products_list, &mut total_sum);
+
+			print_total_sum(&total_sum);
+
+			percentage(&products_list, total_sum);
+		} else if choice == 4 {
+			print_license();
+		}
+	}
+}
 
 ///Function for choosing an option in menus
 
-pub fn make_choise() -> String {
+pub fn make_choice() -> String {
 	let mut choise = String::new();
 
 	io::stdin().read_line(&mut choise).expect("Failed to read line");

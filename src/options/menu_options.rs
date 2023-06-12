@@ -18,16 +18,16 @@ use crate::console::console_menu::{print_bot_border,
                                    print_inp_message,
                                    print_mid_border,
                                    print_top_border};
-use crate::options;
-use crate::product;
+use crate::options::general_options::{count_total_sum, display_list, make_choice, read_product};
+use crate::product_structure::product::Product;
 
 ///Function for running the first option
 
-pub fn run_first_option(products: &mut Vec<product::Product>) {
+pub fn run_first_option(products: &mut Vec<Product>) {
 	loop {
 		print_inp_message();
 
-		let amount = options::general_options::make_choise();
+		let amount = make_choice();
 		let amount: u32 = match amount.trim().parse() {
 			Ok(num) => num,
 			Err(_) => continue,
@@ -35,12 +35,12 @@ pub fn run_first_option(products: &mut Vec<product::Product>) {
 
 		for i in 0..amount {
 			print_top_border(&i);
-			let name = options::general_options::read_product();
+			let name = read_product();
 			print_mid_border(&i);
-			let price = options::general_options::read_product();
+			let price = read_product();
 			print_bot_border();
 
-			let prod = product::Product::new(name, price);
+			let prod = Product::new(name, price);
 
 			products.push(prod);
 		}
@@ -51,12 +51,12 @@ pub fn run_first_option(products: &mut Vec<product::Product>) {
 
 ///Function for running the second option
 
-pub fn run_second_option(products: &Vec<product::Product>) {
-	options::general_options::display_list(products);
+pub fn run_second_option(products: &Vec<Product>) {
+	display_list(products);
 }
 
 ///Function for running the second menu option
 
-pub fn run_third_option(products: &Vec<product::Product>, sum: &mut f64) {
-	options::general_options::count_total_sum(products, sum);
+pub fn run_third_option(products: &Vec<Product>, sum: &mut f64) {
+	count_total_sum(products, sum);
 }
