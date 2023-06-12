@@ -16,7 +16,7 @@ Copyright 2023 Andrew Kushyk
 
 use colored::Colorize;
 
-use crate::product::Product;
+use crate::product_structure::product::Product;
 
 ///Function for printing main menu
 
