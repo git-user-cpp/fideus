@@ -25,7 +25,7 @@ use crate::console::console_menu::{print_first_option,
                                    print_license};
 use crate::console::console_menu::print_percentage;
 use crate::options::menu_options::{run_first_option, run_second_option, run_third_option};
-use crate::product::Product;
+use crate::product_structure::product::Product;
 
 ///Function for launching main menu in terminal
 

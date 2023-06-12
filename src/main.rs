@@ -23,7 +23,6 @@ mod options;
 
 use crate::options::general_options::launch_main_console_menu;
 use crate::console::console_menu::print_stop_message;
-use crate::product_structure::product;
 use crate::product_structure::product::Product;
 
 fn main() {
