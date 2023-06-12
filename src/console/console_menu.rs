@@ -16,13 +16,12 @@ Copyright 2023 Andrew Kushyk
 
 use colored::Colorize;
 
-use crate::product;
 use crate::product::Product;
 
 ///Function for printing main menu
 
 pub fn print_menu() {
-	println!(" {}\n{}             {}             {}\n {}\n{}            Choose an option:            {}\n{}           {}           {}\n{}             {}               {}\n{}  {}  {}\n{}           {}                      {}\n {}\n{}",
+	println!(" {}\n{}             {}             {}\n {}\n{}            Choose an option:            {}\n{}{}                      {}\n{}{}                            {}\n{}{}    {}\n{}{}               {}\n{}{}                                 {}\n {}\n{}",
 	         "-----------------------------------------".blue(),
 	         "|".blue(),
 	         "Finance manager".yellow(),
@@ -38,6 +37,9 @@ pub fn print_menu() {
 	         "|".blue(),
 	         "|".blue(),
 	         "[3] Show total sum & Show percentage ".green(),
+	         "|".blue(),
+	         "|".blue(),
+	         "[4] Info about the program".yellow(),
 	         "|".blue(),
 	         "|".blue(),
 	         "[0] Exit".red(),
@@ -85,7 +87,7 @@ pub fn print_third_option() {
 
 ///Function for printing the list of products
 
-pub fn print_list(products: &Vec<product::Product>) {
+pub fn print_list(products: &Vec<Product>) {
 	for element in products {
 		println!(" {}\n Product: {} Price: {} {}",
 		         "-----------------------------------------".red(),
@@ -154,4 +156,23 @@ pub fn print_mid_border(i: &u32) {
 
 pub fn print_bot_border() {
 	println!(" {}", "-----------------------------------------".red());
+}
+
+///Function for printing project license
+
+pub fn print_license() {
+	println!("\nCopyright 2023 Andrew Kushyk\n\
+		\n\
+			\tLicensed under the Apache License, Version 2.0 (the \"License\");\n\
+			\tyou may not use this file except in compliance with the License.\n\
+			\tYou may obtain a copy of the License at\n\
+		\n\
+				\t\thttp://www.apache.org/licenses/LICENSE-2.0\n\
+		\n\
+			\tUnless required by applicable law or agreed to in writing, software\n\
+			\tdistributed under the License is distributed on an \"AS IS\" BASIS,\n\
+			\tWITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\n\
+			\tSee the License for the specific language governing permissions and\n\
+			\tlimitations under the License.\n"
+	);
 }
