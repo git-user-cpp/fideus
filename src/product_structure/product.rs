@@ -14,14 +14,14 @@ Copyright 2023 Andrew Kushyk
    limitations under the License.
 */
 
-///Structure of the product
+/// Structure of the product
 
 pub struct Product {
 	pub name: String,
 	pub price: f64,
 }
 
-///Implementation block for product
+/// Implementation block for product
 
 impl Product {
 	pub fn new(name: String, price: String) -> Product {

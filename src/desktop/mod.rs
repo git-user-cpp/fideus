@@ -14,22 +14,4 @@ Copyright 2023 Andrew Kushyk
    limitations under the License.
 */
 
-// Module for using this program via console/terminal;
-
-mod console;
-
-// Module for using this program via GUI;
-
-mod desktop;
-
-mod options;
-mod product_structure;
-
-// use crate::console::run_console::run_console;
-use crate::desktop::run_desktop::run_desktop;
-
-fn main() {
-	// run_console();
-
-	run_desktop();
-}
+pub(crate) mod run_desktop;

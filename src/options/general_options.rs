@@ -27,7 +27,7 @@ use crate::console::console_menu::print_percentage;
 use crate::options::menu_options::{run_first_option, run_second_option, run_third_option};
 use crate::product_structure::product::Product;
 
-///Function for launching main menu in terminal
+/// Function for launching main menu in terminal
 
 pub fn launch_main_console_menu(mut products_list: Vec<Product>) {
 	loop {
@@ -66,7 +66,7 @@ pub fn launch_main_console_menu(mut products_list: Vec<Product>) {
 	}
 }
 
-///Function for choosing an option in menus
+/// Function for choosing an option in menus
 
 pub fn make_choice() -> String {
 	let mut choise = String::new();
@@ -76,7 +76,7 @@ pub fn make_choice() -> String {
 	choise
 }
 
-///Function for input products
+/// Function for input products
 
 pub fn read_product() -> String {
 	let mut tmp = String::new();
@@ -86,13 +86,13 @@ pub fn read_product() -> String {
 	tmp.to_string()
 }
 
-///Function for showing the list of products
+/// Function for showing the list of products
 
 pub fn display_list(products: &Vec<Product>) {
 	print_list(products);
 }
 
-///Function for counting total sum
+/// Function for counting total sum
 
 pub fn count_total_sum(products: &Vec<Product>, sum: &mut f64) -> f64 {
 	for element in products {
@@ -102,7 +102,7 @@ pub fn count_total_sum(products: &Vec<Product>, sum: &mut f64) -> f64 {
 	*sum
 }
 
-///Function for counting percentage
+/// Function for counting percentage
 
 pub fn percentage(products_list: &Vec<Product>, total_sum: f64) {
 	for element in products_list {
@@ -110,7 +110,7 @@ pub fn percentage(products_list: &Vec<Product>, total_sum: f64) {
 	}
 }
 
-//TESTS
+// TESTS
 
 #[cfg(test)]
 mod tests {
