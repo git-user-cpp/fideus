@@ -26,9 +26,9 @@ use crate::console::console_menu::print_stop_message;
 use crate::product_structure::product::Product;
 
 fn main() {
-	let mut products_list: Vec<Product> = Vec::new();
-
-	launch_main_console_menu(products_list);
-
-	print_stop_message();
+	// let mut products_list: Vec<Product> = Vec::new();
+	//
+	// launch_main_console_menu(products_list);
+	//
+	// print_stop_message();
 }
