@@ -25,13 +25,13 @@ pub fn run_desktop() {
 /// Interface build
 
 pub fn app(cx: Scope) -> Element {
-	render!{
-		rsx!{
+	render! {
+		rsx! {
 			body {
 				// style: "background-color: black",
 
-				div{
-					h1{
+				div {
+					h1 {
 						style: "color: red",
 						"Information about the program"
 					}
