@@ -14,23 +14,16 @@ Copyright 2023 Andrew Kushyk
    limitations under the License.
 */
 
-// Module for using this program via console/terminal;
+use crate::product_structure::product::Product;
+use crate::options::general_options::launch_main_console_menu;
+use crate::console::console_menu::print_stop_message;
 
-mod console;
+/// Function for running the program in terminal
 
-// Module for using this program via GUI;
+pub fn run_console() {
+	let mut products_list: Vec<Product> = Vec::new();
 
-mod desktop;
+	launch_main_console_menu(products_list);
 
-mod options;
-mod product_structure;
-
-// use crate::console::run_console::run_console;
-
-use crate::desktop::run_desktop::run_desktop;
-
-fn main() {
-	// run_console();
-
-	run_desktop();
+	print_stop_message();
 }

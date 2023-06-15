@@ -1,6 +1,6 @@
 [package]
 name = "finance_manager"
-version = "2.0.2"
+version = "3.0.0"
 edition = "2021"
 authors = ["Andrew Kushyk"]
 description = "Simple finance manager"
@@ -10,6 +10,14 @@ license = "Apache-2.0"
 
 [dependencies]
 colored = "2.0.0"
+
+# stable Dioxus version (use after a new release)
+# dioxus = "0.3.2"
+# dioxus-desktop = "0.3.0"
+
+# git Dioxus version (the latest)
+dioxus = { git = "https://github.com/dioxuslabs/dioxus" }
+dioxus-desktop = { git = "https://github.com/dioxuslabs/dioxus" }
 
 [profile.dev]
 opt-level = 0

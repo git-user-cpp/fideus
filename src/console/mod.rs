@@ -15,3 +15,4 @@ Copyright 2023 Andrew Kushyk
 */
 
 pub(crate) mod console_menu;
+pub(crate) mod run_console;

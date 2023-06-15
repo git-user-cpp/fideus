@@ -21,7 +21,7 @@ use crate::console::console_menu::{print_bot_border,
 use crate::options::general_options::{count_total_sum, display_list, make_choice, read_product};
 use crate::product_structure::product::Product;
 
-///Function for running the first option
+/// Function for running the first option
 
 pub fn run_first_option(products: &mut Vec<Product>) {
 	loop {
@@ -49,13 +49,13 @@ pub fn run_first_option(products: &mut Vec<Product>) {
 	}
 }
 
-///Function for running the second option
+/// Function for running the second option
 
 pub fn run_second_option(products: &Vec<Product>) {
 	display_list(products);
 }
 
-///Function for running the second menu option
+/// Function for running the second menu option
 
 pub fn run_third_option(products: &Vec<Product>, sum: &mut f64) {
 	count_total_sum(products, sum);
