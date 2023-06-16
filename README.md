@@ -1,4 +1,5 @@
-![FiDeus](https://github.com/git-user-cpp/fideus/assets/61907955/c38f001d-381f-4268-966e-a16f72d0555e)
+![FiDeus](https://github.com/git-user-cpp/fideus/assets/61907955/c2870b6a-ad23-45a1-9657-046d6261491d)
+
 
 
 [![Build Ubuntu](https://github.com/git-user-cpp/finance_manager/actions/workflows/CI_Ubuntu.yml/badge.svg?branch=main)](https://github.com/git-user-cpp/finance_manager/actions/workflows/CI_Ubuntu.yml)
