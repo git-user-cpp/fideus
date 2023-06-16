@@ -24,7 +24,7 @@
 
 ---
 
-:heavy_dollar_sign: Simple finance manager :heavy_dollar_sign:
+:heavy_dollar_sign: An easy-to-use financial manager written in Rust :heavy_dollar_sign:
 
 ---
 
