@@ -9,6 +9,7 @@ dependencies = [
  "colored",
  "dioxus",
  "dioxus-desktop",
+ "dioxus-router",
 ]
 
 [[package]]
@@ -738,6 +739,21 @@ dependencies = [
 name = "dioxus-interpreter-js"
 version = "0.3.2"
 source = "git+https://github.com/dioxuslabs/dioxus#f63220019ddaac5a8bc44db855723c245d53632e"
+
+[[package]]
+name = "dioxus-router"
+version = "0.3.0"
+source = "git+https://github.com/dioxuslabs/dioxus#f63220019ddaac5a8bc44db855723c245d53632e"
+dependencies = [
+ "dioxus",
+ "futures-channel",
+ "futures-util",
+ "log",
+ "serde",
+ "serde_urlencoded",
+ "thiserror",
+ "url",
+]
 
 [[package]]
 name = "dioxus-rsx"
@@ -2548,6 +2564,18 @@ version = "0.6.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "93107647184f6027e3b7dcb2e11034cf95ffa1e3a682c67951963ac69c1c007d"
 dependencies = [
+ "serde",
+]
+
+[[package]]
+name = "serde_urlencoded"
+version = "0.7.1"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "d3491c14715ca2294c4d6a88f15e84739788c1d030eed8c110436aafdaa2f3fd"
+dependencies = [
+ "form_urlencoded",
+ "itoa 1.0.6",
+ "ryu",
  "serde",
 ]
 

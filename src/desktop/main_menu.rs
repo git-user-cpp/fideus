@@ -13,8 +13,8 @@ Copyright 2023 Andrew Kushyk
    See the License for the specific language governing permissions and
    limitations under the License.
 */
-
 use dioxus::prelude::*;
+use crate::desktop::information::information;
 
 pub fn main_menu(cx: Scope) -> Element {
 	render! {
@@ -42,6 +42,7 @@ pub fn main_menu(cx: Scope) -> Element {
 						"Show total sum & Show percentage"
 					}
 					button {
+						//TODO: launch information(cx)!!!!!!!!!!
 						onclick: move |event| {
 							println!("{event:?}")
 						},

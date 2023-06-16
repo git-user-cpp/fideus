@@ -14,10 +14,12 @@ colored = "2.0.0"
 # stable Dioxus version (use after a new release)
 # dioxus = "0.3.2"
 # dioxus-desktop = "0.3.0"
+#dioxus-router = "0.3.0"
 
 # git Dioxus version (the latest)
 dioxus = { git = "https://github.com/dioxuslabs/dioxus" }
 dioxus-desktop = { git = "https://github.com/dioxuslabs/dioxus" }
+dioxus-router = { git = "https://github.com/dioxuslabs/dioxus" }
 
 [profile.dev]
 opt-level = 0

@@ -19,6 +19,8 @@ use dioxus::prelude::*;
 /// Function for showing program information
 
 pub fn information(cx: Scope) -> Element {
+	cx.needs_update();
+
 	render! {
 		rsx! {
 			body {
