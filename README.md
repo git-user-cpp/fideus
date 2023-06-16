@@ -1,4 +1,4 @@
-# Finance manager v3.0.0
+# FiDeus v3.0.0
 
 [![Build Ubuntu](https://github.com/git-user-cpp/finance_manager/actions/workflows/CI_Ubuntu.yml/badge.svg?branch=main)](https://github.com/git-user-cpp/finance_manager/actions/workflows/CI_Ubuntu.yml)
 [![Build Windows](https://github.com/git-user-cpp/finance_manager/actions/workflows/CI_Windows.yml/badge.svg?branch=main)](https://github.com/git-user-cpp/finance_manager/actions/workflows/CI_Windows.yml)

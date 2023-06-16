@@ -3,6 +3,15 @@
 version = 3
 
 [[package]]
+name = "FiDeus"
+version = "3.0.0"
+dependencies = [
+ "colored",
+ "dioxus",
+ "dioxus-desktop",
+]
+
+[[package]]
 name = "adler"
 version = "1.0.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -904,15 +913,6 @@ dependencies = [
  "libc",
  "redox_syscall 0.2.16",
  "windows-sys 0.48.0",
-]
-
-[[package]]
-name = "finance_manager"
-version = "3.0.0"
-dependencies = [
- "colored",
- "dioxus",
- "dioxus-desktop",
 ]
 
 [[package]]

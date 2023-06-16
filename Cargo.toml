@@ -1,5 +1,5 @@
 [package]
-name = "finance_manager"
+name = "FiDeus"
 version = "3.0.0"
 edition = "2021"
 authors = ["Andrew Kushyk"]
