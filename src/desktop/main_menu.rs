@@ -16,18 +16,39 @@ Copyright 2023 Andrew Kushyk
 
 use dioxus::prelude::*;
 
-// use crate::desktop::information::information;
-use crate::desktop::main_menu::main_menu;
+pub fn main_menu(cx: Scope) -> Element {
+	render! {
+		rsx! {
+			body {
+				// style: "background-color: black",
 
-/// Function for running as a desktop program
-
-pub fn run_desktop() {
-	dioxus_desktop::launch(app);
-}
-
-/// Interface build
-
-fn app(cx: Scope) -> Element {
-	// information(cx)
-	main_menu(cx)
+				div {
+					button {
+						onclick: move |event| {
+							println!("{event:?}")
+						},
+						"Insert Products"
+					}
+					button {
+						onclick: move |event| {
+							println!("{event:?}")
+						},
+						"Show List"
+					}
+					button {
+						onclick: move |event| {
+							println!("{event:?}")
+						},
+						"Show total sum & Show percentage"
+					}
+					button {
+						onclick: move |event| {
+							println!("{event:?}")
+						},
+						"Info about the program"
+					}
+				}
+			}
+		}
+	}
 }

@@ -15,3 +15,5 @@ Copyright 2023 Andrew Kushyk
 */
 
 pub(crate) mod run_desktop;
+pub(crate) mod information;
+pub(crate) mod main_menu;
