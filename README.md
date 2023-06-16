@@ -1,4 +1,5 @@
-# FiDeus v3.0.0
+![FiDeus](https://github.com/git-user-cpp/fideus/assets/61907955/c38f001d-381f-4268-966e-a16f72d0555e)
+
 
 [![Build Ubuntu](https://github.com/git-user-cpp/finance_manager/actions/workflows/CI_Ubuntu.yml/badge.svg?branch=main)](https://github.com/git-user-cpp/finance_manager/actions/workflows/CI_Ubuntu.yml)
 [![Build Windows](https://github.com/git-user-cpp/finance_manager/actions/workflows/CI_Windows.yml/badge.svg?branch=main)](https://github.com/git-user-cpp/finance_manager/actions/workflows/CI_Windows.yml)
