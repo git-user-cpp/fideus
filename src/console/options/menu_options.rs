@@ -48,7 +48,10 @@ pub fn run_first_option(products: &mut Vec<Product>) {
 
 			let prod = Product::new(name, price);
 
-			products.push(prod);
+			match prod {
+				Ok(prod) => products.push(prod),
+				Err(_) => eprintln!("[Error] an empty element"),
+			};
 		}
 
 		break;
