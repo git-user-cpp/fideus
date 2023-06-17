@@ -16,7 +16,7 @@ Copyright 2023 Andrew Kushyk
 
 use dioxus::prelude::*;
 
-/// Function for showing program information
+/// Function for showing the fourth option
 
 pub fn information(cx: Scope) -> Element {
 	render! {

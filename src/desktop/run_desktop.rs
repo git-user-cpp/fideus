@@ -15,19 +15,14 @@ Copyright 2023 Andrew Kushyk
 */
 
 use dioxus::prelude::*;
-use dioxus_desktop::{Config, WindowBuilder};
 
 use crate::desktop::main_menu::main_menu;
+use crate::desktop::window::create_config;
 
 /// Function for running as a desktop program
 
 pub fn run_desktop() {
-	let config = Config::new().with_window(
-		WindowBuilder::default()
-			.with_title("FiDeus")
-	);
-
-	dioxus_desktop::launch_cfg(app, config);
+	dioxus_desktop::launch_cfg(app, create_config("FiDeus"));
 }
 
 /// Interface render

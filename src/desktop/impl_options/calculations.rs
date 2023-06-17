@@ -14,7 +14,19 @@ Copyright 2023 Andrew Kushyk
    limitations under the License.
 */
 
-pub(crate) mod run_desktop;
-pub(crate) mod main_menu;
-pub(crate) mod window;
-pub(crate) mod impl_options;
+use dioxus::prelude::*;
+
+/// Function for showing the third option
+
+pub fn calculations(cx: Scope) -> Element {
+	render! {
+		rsx! {
+			div {
+				h1 {
+						style: "color: red",
+						"Need to be implemented"
+				}
+			}
+		}
+	}
+}

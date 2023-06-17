@@ -15,9 +15,13 @@ Copyright 2023 Andrew Kushyk
 */
 
 use dioxus::prelude::*;
-use dioxus_desktop::{Config, WindowBuilder};
 
-use crate::desktop::information::information;
+use crate::desktop::window::create_config;
+
+use crate::desktop::impl_options::calculations::calculations;
+use crate::desktop::impl_options::information::information;
+use crate::desktop::impl_options::list::list;
+use crate::desktop::impl_options::products::insert_product;
 
 /// Function for rendering main menu window
 
@@ -29,20 +33,20 @@ pub fn main_menu(cx: Scope) -> Element {
 
 				div {
 					button {
-						onclick: move |event| {
-							println!("{event:?}")
+						onclick: move |_| {
+							insert_information(cx)
 						},
 						"Insert Products"
 					}
 					button {
-						onclick: move |event| {
-							println!("{event:?}")
+						onclick: move |_| {
+							show_list(cx)
 						},
 						"Show List"
 					}
 					button {
-						onclick: move |event| {
-							println!("{event:?}")
+						onclick: move |_| {
+							show_calculations(cx)
 						},
 						"Show total sum & Show percentage"
 					}
@@ -58,16 +62,34 @@ pub fn main_menu(cx: Scope) -> Element {
 	}
 }
 
+/// Function for rendering window for entering products
+
+fn insert_information(cx: Scope) {
+	let window = dioxus_desktop::use_window(cx);
+
+	window.new_window(VirtualDom::new(insert_product), create_config("FiDeus Insert Products"));
+}
+
+/// Function for rendering window for entering products
+
+fn show_list(cx: Scope) {
+	let window = dioxus_desktop::use_window(cx);
+
+	window.new_window(VirtualDom::new(list), create_config("FiDeus List of Products"));
+}
+
+/// Function for rendering window for getting calculations
+
+fn show_calculations(cx: Scope) {
+	let window = dioxus_desktop::use_window(cx);
+
+	window.new_window(VirtualDom::new(calculations), create_config("FiDeus Calculations"));
+}
+
 /// Function for rendering window with info about the program
 
 fn show_information(cx: Scope) {
 	let window = dioxus_desktop::use_window(cx);
 
-	let config = Config::new().with_window(
-		WindowBuilder::default()
-			.with_title("FiDeus Info")
-	);
-
-	let dom = VirtualDom::new(information);
-	window.new_window(dom, config);
+	window.new_window(VirtualDom::new(information), create_config("FiDeus Information"));
 }

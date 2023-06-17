@@ -14,7 +14,7 @@ Copyright 2023 Andrew Kushyk
    limitations under the License.
 */
 
-pub(crate) mod run_desktop;
-pub(crate) mod main_menu;
-pub(crate) mod window;
-pub(crate) mod impl_options;
+pub(crate) mod calculations;
+pub(crate) mod information;
+pub(crate) mod list;
+pub(crate) mod products;
