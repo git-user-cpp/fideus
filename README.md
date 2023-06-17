@@ -48,6 +48,11 @@ limitations under the License.
 
 ---
 
+## 🤝 How to contribute to FiDeus 🤝
+All rules are here: [Contribution](https://github.com/git-user-cpp/fideus/blob/main/CONTRIBUTING.md).
+
+---
+
 ## 💻 How to use this app 💻
 
 1) ⚠️ **The application is designed for Linux, so avoid using other systems or remake the program to avoid bugs.** ⚠️
