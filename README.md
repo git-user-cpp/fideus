@@ -55,15 +55,15 @@ limitations under the License.
 2) 🗂️ Download *all* files and put them in a one directory.
 
 3) ⚒️ Compile and run the program with *cargo*.
-    - Сompilation example
+    - Compilation example for desktop version
     ```
-    cargo run
+    cargo run --features desktop
     ```
-4) 👷 Choose the first function by inserting **1**, then enter the number of products, product names and prices.
-5) :ballot_box_with_check: To view the list of products, select the **2** function in the main menu *(after entering the
-   products)*.
-6) 🌠 To view the total sum and percentage, select the **3** function in the main menu *(after entering the products)*.
-7) :heavy_dollar_sign: Enjoy =)
+    - Compilation example for console version
+    ```
+    cargo run --features console
+    ```
+4) :heavy_dollar_sign: Enjoy =)
 
 ---
 
