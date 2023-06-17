@@ -14,7 +14,14 @@ Copyright 2023 Andrew Kushyk
    limitations under the License.
 */
 
+#[cfg(feature = "desktop")]
 pub(crate) mod calculations;
+
+#[cfg(feature = "desktop")]
 pub(crate) mod information;
+
+#[cfg(feature = "desktop")]
 pub(crate) mod list;
+
+#[cfg(feature = "desktop")]
 pub(crate) mod products;

@@ -14,8 +14,10 @@ Copyright 2023 Andrew Kushyk
    limitations under the License.
 */
 
+#[cfg(feature = "console")]
 use std::io;
 
+#[cfg(feature = "console")]
 use crate::console::console_menu::{print_first_option,
                                    print_list,
                                    print_menu,
@@ -23,12 +25,15 @@ use crate::console::console_menu::{print_first_option,
                                    print_third_option,
                                    print_total_sum,
                                    print_license};
+#[cfg(feature = "console")]
 use crate::console::console_menu::print_percentage;
-use crate::options::menu_options::{run_first_option, run_second_option, run_third_option};
+#[cfg(feature = "console")]
+use crate::console::options::menu_options::{run_first_option, run_second_option, run_third_option};
 use crate::product_structure::product::Product;
 
 /// Function for launching main menu in terminal
 
+#[cfg(feature = "console")]
 pub fn launch_main_console_menu(mut products_list: Vec<Product>) {
 	loop {
 		print_menu();
@@ -68,6 +73,7 @@ pub fn launch_main_console_menu(mut products_list: Vec<Product>) {
 
 /// Function for choosing an option in menus
 
+#[cfg(feature = "console")]
 pub fn make_choice() -> String {
 	let mut choise = String::new();
 
@@ -78,6 +84,7 @@ pub fn make_choice() -> String {
 
 /// Function for input products
 
+#[cfg(feature = "console")]
 pub fn read_product() -> String {
 	let mut tmp = String::new();
 
@@ -88,11 +95,13 @@ pub fn read_product() -> String {
 
 /// Function for showing the list of products
 
+#[cfg(feature = "console")]
 pub fn display_list(products: &Vec<Product>) {
 	print_list(products);
 }
 
 /// Function for counting total sum
+
 
 pub fn count_total_sum(products: &Vec<Product>, sum: &mut f64) -> f64 {
 	for element in products {
@@ -104,6 +113,7 @@ pub fn count_total_sum(products: &Vec<Product>, sum: &mut f64) -> f64 {
 
 /// Function for counting percentage
 
+#[cfg(feature = "console")]
 pub fn percentage(products_list: &Vec<Product>, total_sum: f64) {
 	for element in products_list {
 		print_percentage(element, &total_sum);

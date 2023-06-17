@@ -14,5 +14,8 @@ Copyright 2023 Andrew Kushyk
    limitations under the License.
 */
 
+#[cfg(feature = "console")]
 pub(crate) mod menu_options;
+
+#[cfg(feature = "console")]
 pub(crate) mod general_options;

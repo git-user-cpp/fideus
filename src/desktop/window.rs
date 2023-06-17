@@ -14,10 +14,12 @@ Copyright 2023 Andrew Kushyk
    limitations under the License.
 */
 
+#[cfg(feature = "desktop")]
 use dioxus_desktop::{Config, WindowBuilder};
 
 /// Function for creating config for an existing window
 
+#[cfg(feature = "desktop")]
 pub fn create_config(name: &str) -> Config {
 	Config::new().with_window(
 		WindowBuilder::default()

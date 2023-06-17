@@ -16,36 +16,25 @@ Copyright 2023 Andrew Kushyk
 
 // Module for using this program via console/terminal;
 
+#[cfg(feature = "console")]
 mod console;
 
 // Module for using this program via GUI;
 
+#[cfg(feature = "desktop")]
 mod desktop;
 
-mod options;
 mod product_structure;
 
-// use crate::console::run_console::run_console;
-
+#[cfg(feature = "console")]
 use crate::console::run_console::run_console;
+#[cfg(feature = "desktop")]
 use crate::desktop::run_desktop::run_desktop;
 
 fn main() {
-	let args: Vec<String> = std::env::args().collect();
-	let error_msg = "[ERROR] Invalid version specified. Choose one version:\nInstance: \n\tcargo run desktop\n\tcargo run console";
+	#[cfg(feature = "desktop")]
+	run_desktop();
 
-	if args.len() < 2 {
-		println!("{}", error_msg);
-		return;
-	}
-
-	let version = &args[1];
-
-	if version == "desktop" {
-		run_desktop();
-	} else if version == "console" {
-		run_console();
-	} else {
-		println!("{}", error_msg);
-	}
+	#[cfg(feature = "console")]
+	run_console();
 }

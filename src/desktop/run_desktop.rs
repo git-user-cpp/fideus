@@ -14,19 +14,24 @@ Copyright 2023 Andrew Kushyk
    limitations under the License.
 */
 
+#[cfg(feature = "desktop")]
 use dioxus::prelude::*;
 
+#[cfg(feature = "desktop")]
 use crate::desktop::main_menu::main_menu;
+#[cfg(feature = "desktop")]
 use crate::desktop::window::create_config;
 
 /// Function for running as a desktop program
 
+#[cfg(feature = "desktop")]
 pub fn run_desktop() {
 	dioxus_desktop::launch_cfg(app, create_config("FiDeus"));
 }
 
 /// Interface render
 
+#[cfg(feature = "desktop")]
 fn app(cx: Scope) -> Element {
 	main_menu(cx)
 }
