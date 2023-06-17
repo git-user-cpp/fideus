@@ -15,19 +15,23 @@ Copyright 2023 Andrew Kushyk
 */
 
 use dioxus::prelude::*;
+use dioxus_desktop::{Config, WindowBuilder};
 
-// use crate::desktop::information::information;
 use crate::desktop::main_menu::main_menu;
 
 /// Function for running as a desktop program
 
 pub fn run_desktop() {
-	dioxus_desktop::launch(app);
+	let config = Config::new().with_window(
+		WindowBuilder::default()
+			.with_title("FiDeus")
+	);
+
+	dioxus_desktop::launch_cfg(app, config);
 }
 
-/// Interface build
+/// Interface render
 
 fn app(cx: Scope) -> Element {
-	// information(cx)
 	main_menu(cx)
 }
