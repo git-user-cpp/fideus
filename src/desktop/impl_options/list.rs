@@ -17,7 +17,7 @@ Copyright 2023 Andrew Kushyk
 #[cfg(feature = "desktop")]
 use dioxus::prelude::*;
 
-/// Function for showing the second option
+/// Function for showing a list of products
 
 #[cfg(feature = "desktop")]
 pub fn list(cx: Scope) -> Element {

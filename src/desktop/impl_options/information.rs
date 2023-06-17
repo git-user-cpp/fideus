@@ -17,7 +17,7 @@ Copyright 2023 Andrew Kushyk
 #[cfg(feature = "desktop")]
 use dioxus::prelude::*;
 
-/// Function for showing the fourth option
+/// Function for showing information about the program
 
 #[cfg(feature = "desktop")]
 pub fn information(cx: Scope) -> Element {

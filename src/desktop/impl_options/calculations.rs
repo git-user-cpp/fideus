@@ -17,7 +17,7 @@ Copyright 2023 Andrew Kushyk
 #[cfg(feature = "desktop")]
 use dioxus::prelude::*;
 
-/// Function for showing the third option
+/// Function for showing calculations
 
 #[cfg(feature = "desktop")]
 pub fn calculations(cx: Scope) -> Element {
