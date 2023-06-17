@@ -14,12 +14,18 @@ Copyright 2023 Andrew Kushyk
    limitations under the License.
 */
 
+#[cfg(feature = "console")]
 use crate::product_structure::product::Product;
-use crate::options::general_options::launch_main_console_menu;
+
+#[cfg(feature = "console")]
+use crate::console::options::general_options::launch_main_console_menu;
+
+#[cfg(feature = "console")]
 use crate::console::console_menu::print_stop_message;
 
 /// Function for running the program in terminal
 
+#[cfg(feature = "console")]
 pub fn run_console() {
 	let mut products_list: Vec<Product> = Vec::new();
 

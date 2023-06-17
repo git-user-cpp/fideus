@@ -14,10 +14,12 @@ Copyright 2023 Andrew Kushyk
    limitations under the License.
 */
 
+#[cfg(feature = "desktop")]
 use dioxus::prelude::*;
 
 /// Function for showing the second option
 
+#[cfg(feature = "desktop")]
 pub fn list(cx: Scope) -> Element {
 	render! {
 		rsx! {

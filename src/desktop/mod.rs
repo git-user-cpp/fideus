@@ -14,7 +14,14 @@ Copyright 2023 Andrew Kushyk
    limitations under the License.
 */
 
+#[cfg(feature = "desktop")]
 pub(crate) mod run_desktop;
+
+#[cfg(feature = "desktop")]
 pub(crate) mod main_menu;
+
+#[cfg(feature = "desktop")]
 pub(crate) mod window;
+
+#[cfg(feature = "desktop")]
 pub(crate) mod impl_options;

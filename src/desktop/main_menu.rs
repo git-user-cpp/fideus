@@ -14,17 +14,24 @@ Copyright 2023 Andrew Kushyk
    limitations under the License.
 */
 
+#[cfg(feature = "desktop")]
 use dioxus::prelude::*;
 
+#[cfg(feature = "desktop")]
 use crate::desktop::window::create_config;
 
+#[cfg(feature = "desktop")]
 use crate::desktop::impl_options::calculations::calculations;
+#[cfg(feature = "desktop")]
 use crate::desktop::impl_options::information::information;
+#[cfg(feature = "desktop")]
 use crate::desktop::impl_options::list::list;
+#[cfg(feature = "desktop")]
 use crate::desktop::impl_options::products::insert_product;
 
 /// Function for rendering main menu window
 
+#[cfg(feature = "desktop")]
 pub fn main_menu(cx: Scope) -> Element {
 	render! {
 		rsx! {
@@ -64,6 +71,7 @@ pub fn main_menu(cx: Scope) -> Element {
 
 /// Function for rendering window for entering products
 
+#[cfg(feature = "desktop")]
 fn insert_information(cx: Scope) {
 	let window = dioxus_desktop::use_window(cx);
 
@@ -72,6 +80,7 @@ fn insert_information(cx: Scope) {
 
 /// Function for rendering window for entering products
 
+#[cfg(feature = "desktop")]
 fn show_list(cx: Scope) {
 	let window = dioxus_desktop::use_window(cx);
 
@@ -80,6 +89,7 @@ fn show_list(cx: Scope) {
 
 /// Function for rendering window for getting calculations
 
+#[cfg(feature = "desktop")]
 fn show_calculations(cx: Scope) {
 	let window = dioxus_desktop::use_window(cx);
 
@@ -88,6 +98,7 @@ fn show_calculations(cx: Scope) {
 
 /// Function for rendering window with info about the program
 
+#[cfg(feature = "desktop")]
 fn show_information(cx: Scope) {
 	let window = dioxus_desktop::use_window(cx);
 

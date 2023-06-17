@@ -14,10 +14,12 @@ Copyright 2023 Andrew Kushyk
    limitations under the License.
 */
 
+#[cfg(feature = "desktop")]
 use dioxus::prelude::*;
 
 /// Function for showing the first option
 
+#[cfg(feature = "desktop")]
 pub fn insert_product(cx: Scope) -> Element {
 	render! {
 		rsx! {

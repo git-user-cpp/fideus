@@ -14,15 +14,21 @@ Copyright 2023 Andrew Kushyk
    limitations under the License.
 */
 
+#[cfg(feature = "console")]
 use crate::console::console_menu::{print_bot_border,
                                    print_inp_message,
                                    print_mid_border,
                                    print_top_border};
-use crate::options::general_options::{count_total_sum, display_list, make_choice, read_product};
+
+#[cfg(feature = "console")]
+use crate::console::options::general_options::{count_total_sum, display_list, make_choice, read_product};
+
+#[cfg(feature = "console")]
 use crate::product_structure::product::Product;
 
 /// Function for running the first option
 
+#[cfg(feature = "console")]
 pub fn run_first_option(products: &mut Vec<Product>) {
 	loop {
 		print_inp_message();
@@ -51,12 +57,14 @@ pub fn run_first_option(products: &mut Vec<Product>) {
 
 /// Function for running the second option
 
+#[cfg(feature = "console")]
 pub fn run_second_option(products: &Vec<Product>) {
 	display_list(products);
 }
 
 /// Function for running the second menu option
 
+#[cfg(feature = "console")]
 pub fn run_third_option(products: &Vec<Product>, sum: &mut f64) {
 	count_total_sum(products, sum);
 }
