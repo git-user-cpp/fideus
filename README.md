@@ -49,7 +49,8 @@ limitations under the License.
 ---
 
 ## 🤝 How to contribute to FiDeus 🤝
-All rules are here: [Contribution](https://github.com/git-user-cpp/fideus/blob/main/CONTRIBUTING.md).
+
+📘 All the rules are here: [Contribution](https://github.com/git-user-cpp/fideus/blob/main/CONTRIBUTING.md).
 
 ---
 
