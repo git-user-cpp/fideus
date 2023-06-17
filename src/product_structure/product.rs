@@ -15,21 +15,22 @@ Copyright 2023 Andrew Kushyk
 */
 
 /// Structure of the product
-
 pub struct Product {
-	pub name: String,
-	pub price: f64,
+    pub name: String,
+    pub price: f64,
 }
 
 /// Implementation block for product
-
 impl Product {
-	pub fn new(name: String, price: String) -> Product {
-		let float_price: f64 = price.trim().parse().expect("Wrong input! You have to input price! Example: 12.50");
+    pub fn new(name: String, price: String) -> Result<Product, &'static str> {
+        let float_price: Result<f64, _> = price.trim().parse();
 
-		Product {
-			name,
-			price: float_price,
-		}
-	}
+        match float_price {
+            Ok(parsed_price) => Ok(Product {
+                name,
+                price: parsed_price,
+            }),
+            Err(_) => Err("Invalid price format. Please enter a valid price."),
+        }
+    }
 }
