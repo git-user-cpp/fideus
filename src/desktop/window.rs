@@ -14,7 +14,13 @@ Copyright 2023 Andrew Kushyk
    limitations under the License.
 */
 
-pub(crate) mod run_desktop;
-pub(crate) mod main_menu;
-pub(crate) mod window;
-pub(crate) mod impl_options;
+use dioxus_desktop::{Config, WindowBuilder};
+
+/// Function for creating config for an existing window
+
+pub fn create_config(name: &str) -> Config {
+	Config::new().with_window(
+		WindowBuilder::default()
+			.with_title(name)
+	)
+}
