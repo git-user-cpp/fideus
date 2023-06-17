@@ -13,8 +13,13 @@ Copyright 2023 Andrew Kushyk
    See the License for the specific language governing permissions and
    limitations under the License.
 */
+
 use dioxus::prelude::*;
+use dioxus_desktop::{Config, WindowBuilder};
+
 use crate::desktop::information::information;
+
+/// Function for rendering main menu window
 
 pub fn main_menu(cx: Scope) -> Element {
 	render! {
@@ -42,14 +47,27 @@ pub fn main_menu(cx: Scope) -> Element {
 						"Show total sum & Show percentage"
 					}
 					button {
-						//TODO: launch information(cx)!!!!!!!!!!
-						onclick: move |event| {
-							println!("{event:?}")
-						},
-						"Info about the program"
-					}
+		                onclick: move |_| {
+							show_information(cx)
+		                },
+		                "Info about the program"
+		            }
 				}
 			}
 		}
 	}
+}
+
+/// Function for rendering window with info about the program
+
+fn show_information(cx: Scope) {
+	let window = dioxus_desktop::use_window(cx);
+
+	let config = Config::new().with_window(
+		WindowBuilder::default()
+			.with_title("FiDeus Info")
+	);
+
+	let dom = VirtualDom::new(information);
+	window.new_window(dom, config);
 }
