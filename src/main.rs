@@ -27,10 +27,25 @@ mod product_structure;
 
 // use crate::console::run_console::run_console;
 
+use crate::console::run_console::run_console;
 use crate::desktop::run_desktop::run_desktop;
 
 fn main() {
-	// run_console();
+	let args: Vec<String> = std::env::args().collect();
+	let error_msg = "[ERROR] Invalid version specified. Choose one version:\nInstance: \n\tcargo run desktop\n\tcargo run console";
 
-	run_desktop();
+	if args.len() < 2 {
+		println!("{}", error_msg);
+		return;
+	}
+
+	let version = &args[1];
+
+	if version == "desktop" {
+		run_desktop();
+	} else if version == "console" {
+		run_console();
+	} else {
+		println!("{}", error_msg);
+	}
 }
