@@ -36,7 +36,7 @@ pub fn main_menu(cx: Scope) -> Element {
 	render! {
 		rsx! {
 			body {
-				// style: "background-color: black",
+				style: "background-color: #212121",
 
 				div {
 					button {

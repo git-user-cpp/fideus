@@ -16,6 +16,7 @@ Copyright 2023 Andrew Kushyk
 
 #[cfg(feature = "desktop")]
 use dioxus_desktop::{Config, WindowBuilder};
+use dioxus_desktop::tao::window::Theme::Dark;
 
 /// Function for creating config for an existing window
 
@@ -23,6 +24,6 @@ use dioxus_desktop::{Config, WindowBuilder};
 pub fn create_config(name: &str) -> Config {
 	Config::new().with_window(
 		WindowBuilder::default()
-			.with_title(name)
+			.with_theme(Option::from(Dark)).with_title(name).with_resizable(true)
 	)
 }
