@@ -16,8 +16,8 @@ Copyright 2023 Andrew Kushyk
 
 /// Structure of the product
 pub struct Product {
-    pub name: String,
-    pub price: f64,
+    name: String,
+    price: f64,
 }
 
 /// Implementation block for product
@@ -32,5 +32,13 @@ impl Product {
             }),
             Err(_) => Err("Invalid price format. Please enter a valid price."),
         }
+    }
+
+    pub fn get_name(&self) -> String {
+        self.name.clone()
+    }
+
+    pub fn get_price(&self) -> f64 {
+        self.price
     }
 }

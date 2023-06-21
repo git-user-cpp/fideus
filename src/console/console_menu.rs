@@ -98,8 +98,8 @@ pub fn print_list(products: &Vec<Product>) {
 	for element in products {
 		println!(" {}\n Product: {} Price: {} {}",
 		         "-----------------------------------------".red(),
-		         element.name,
-		         element.price,
+		         element.get_name(),
+		         element.get_price(),
 		         "\n -----------------------------------------".red()
 		);
 	}
@@ -136,9 +136,9 @@ pub fn print_total_sum(total_sum: &f64) {
 pub fn print_percentage(element: &Product, total_sum: &f64) {
 	println!(" {}\n Product: {}\n Price: {}\n Percentage of the purchase (%) : {}%\n {}",
 	         "-----------------------------------------".red(),
-	         element.name,
-	         element.price,
-	         (element.price * 100.0) / total_sum,
+	         element.get_name(),
+	         element.get_price(),
+	         (element.get_price() * 100.0) / total_sum,
 	         "\n -----------------------------------------".red()
 	);
 }
