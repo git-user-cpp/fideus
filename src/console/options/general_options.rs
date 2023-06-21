@@ -105,7 +105,7 @@ pub fn display_list(products: &Vec<Product>) {
 
 pub fn count_total_sum(products: &Vec<Product>, sum: &mut f64) -> f64 {
 	for element in products {
-		*sum += element.price;
+		*sum += element.get_price();
 	}
 
 	*sum
