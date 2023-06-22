@@ -23,11 +23,11 @@ use dioxus::prelude::*;
 pub fn insert_product(cx: Scope) -> Element {
 	render! {
 		rsx! {
-			div {
-				h1 {
-						style: "color: red",
-						"Need to be implemented"
-				}
+			style {include_str!("../style/dark_theme.css")},
+
+			h1 {
+				style: "color: red",
+				"Need to be implemented"
 			}
 		}
 	}
