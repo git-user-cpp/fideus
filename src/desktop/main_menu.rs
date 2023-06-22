@@ -35,34 +35,45 @@ use crate::desktop::impl_options::products::insert_product;
 pub fn main_menu(cx: Scope) -> Element {
 	render! {
 		rsx! {
-			body {
-				style: "background-color: #212121",
+			style {include_str!("./style/dark_theme.css")}
 
-				div {
-					button {
-						onclick: move |_| {
-							insert_information(cx)
-						},
-						"Insert Products"
-					}
-					button {
-						onclick: move |_| {
-							show_list(cx)
-						},
-						"Show List"
-					}
-					button {
-						onclick: move |_| {
-							show_calculations(cx)
-						},
-						"Show total sum & Show percentage"
-					}
-					button {
-		                onclick: move |_| {
-							show_information(cx)
-		                },
-		                "Info about the program"
-		            }
+			div {
+				button {
+					style: "color: black",
+					onclick: move |_| {
+						insert_information(cx)
+					},
+					"Insert Products"
+				}
+			}
+
+			div {
+				button {
+					style: "color: black",
+					onclick: move |_| {
+						show_list(cx)
+					},
+					"Show List"
+				}
+			}
+
+			div {
+				button {
+					style: "color: black",
+					onclick: move |_| {
+						show_calculations(cx)
+					},
+					"Show total sum & Show percentage"
+				}
+			}
+
+			div {
+				button {
+					style: "color: black",
+					onclick: move |_| {
+						show_information(cx)
+					},
+					"Info about the program"
 				}
 			}
 		}
