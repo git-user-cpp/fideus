@@ -14,6 +14,7 @@ Copyright 2023 Andrew Kushyk
    limitations under the License.
 */
 
+use dioxus::html::style;
 #[cfg(feature = "desktop")]
 use dioxus::prelude::*;
 
@@ -55,6 +56,41 @@ pub fn information(cx: Scope) -> Element {
 				WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 				See the License for the specific language governing permissions and
 				limitations under the License."
+			}
+
+			p {
+				style: "color: white",
+				"------------------------------"
+			}
+
+			p {
+				style: "color: white",
+				"Project repository: "
+				a {
+					style: "color: red",
+					href: "https://github.com/git-user-cpp/fideus",
+					"https://github.com/git-user-cpp/fideus"
+				}
+			}
+
+			p {
+				style: "color: white",
+				"Project owner: "
+				a {
+					style: "color: red",
+					href: "https://github.com/git-user-cpp",
+					"https://github.com/git-user-cpp"
+				}
+			}
+
+			p {
+				style: "color: white",
+				"Contributors: "
+				a {
+					style: "color: red",
+					href: "https://github.com/git-user-cpp/fideus/graphs/contributors",
+					"https://github.com/git-user-cpp/fideus/graphs/contributors"
+				}
 			}
 		}
 	}
