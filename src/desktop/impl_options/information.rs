@@ -14,7 +14,6 @@ Copyright 2023 Andrew Kushyk
    limitations under the License.
 */
 
-use dioxus::html::style;
 #[cfg(feature = "desktop")]
 use dioxus::prelude::*;
 
