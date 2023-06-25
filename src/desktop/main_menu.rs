@@ -16,6 +16,7 @@ Copyright 2023 Andrew Kushyk
 
 #[cfg(feature = "desktop")]
 use dioxus::prelude::*;
+use dioxus_desktop::use_window;
 
 #[cfg(feature = "desktop")]
 use crate::desktop::window::create_config;
@@ -111,7 +112,7 @@ fn show_calculations(cx: Scope) {
 
 #[cfg(feature = "desktop")]
 fn show_information(cx: Scope) {
-	let window = dioxus_desktop::use_window(cx);
+	let window = use_window(cx);
 
 	window.new_window(VirtualDom::new(information), create_config("FiDeus Information"));
 }
