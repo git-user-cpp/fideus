@@ -16,11 +16,8 @@ Copyright 2023 Andrew Kushyk
 
 #[cfg(feature = "desktop")]
 use dioxus::prelude::*;
-use dioxus_desktop::use_window;
-use dioxus_router::{Router, Route, Link};
-
 #[cfg(feature = "desktop")]
-use crate::desktop::window::create_config;
+use dioxus_router::{Router, Route, Link};
 
 #[cfg(feature = "desktop")]
 use crate::desktop::impl_options::calculations::calculations;
@@ -49,8 +46,6 @@ fn main_options(cx: Scope) -> Element {
 			}
 		}
 		ul {
-			class: "button",
-			style: "text-decoration: none",
 			Link {
 				to: "/information", "Information"
 			}
