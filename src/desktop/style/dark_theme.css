@@ -17,23 +17,28 @@ body {
 }
 
 div {
+    font-weight: bold;
     margin-top: 10px;
     margin-bottom: 10px;
-    align-items
+    display: grid;
+    align-items: center;
+    justify-content: center;
 }
 
-button {
+ul {
     border: 0;
+    width: 300px;
     line-height: 2.5;
+    margin-right: 10px;
     padding: 0 20px;
     font-size: 1rem;
+    font-weight: bold;
     text-align: center;
-    text-shadow: 1px 1px 1px #000;
     border-radius: 10px;
     background: #87CEFA;
     box-shadow: inset 2px 2px 3px rgba(255, 255, 255, 0.6), inset -2px -2px 3px rgba(0, 0, 0, 0.6);
 }
 
-button:active {
+ul:active {
     box-shadow: inset -2px -2px 3px rgba(255, 255, 255, 0.6), inset 2px 2px 3px rgba(0, 0, 0, 0.6);
 }

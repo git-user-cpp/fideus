@@ -56,6 +56,41 @@ pub fn information(cx: Scope) -> Element {
 				See the License for the specific language governing permissions and
 				limitations under the License."
 			}
+
+			p {
+				style: "color: white",
+				"------------------------------"
+			}
+
+			p {
+				style: "color: white",
+				"Project repository: "
+				a {
+					style: "color: red",
+					href: "https://github.com/git-user-cpp/fideus",
+					"https://github.com/git-user-cpp/fideus"
+				}
+			}
+
+			p {
+				style: "color: white",
+				"Project owner: "
+				a {
+					style: "color: red",
+					href: "https://github.com/git-user-cpp",
+					"https://github.com/git-user-cpp"
+				}
+			}
+
+			p {
+				style: "color: white",
+				"Contributors: "
+				a {
+					style: "color: red",
+					href: "https://github.com/git-user-cpp/fideus/graphs/contributors",
+					"https://github.com/git-user-cpp/fideus/graphs/contributors"
+				}
+			}
 		}
 	}
 }

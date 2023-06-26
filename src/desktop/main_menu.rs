@@ -16,9 +16,8 @@ Copyright 2023 Andrew Kushyk
 
 #[cfg(feature = "desktop")]
 use dioxus::prelude::*;
-
 #[cfg(feature = "desktop")]
-use crate::desktop::window::create_config;
+use dioxus_router::{Router, Route, Link};
 
 #[cfg(feature = "desktop")]
 use crate::desktop::impl_options::calculations::calculations;
@@ -29,6 +28,31 @@ use crate::desktop::impl_options::list::list;
 #[cfg(feature = "desktop")]
 use crate::desktop::impl_options::products::insert_product;
 
+fn main_options(cx: Scope) -> Element {
+	cx.render(rsx! {
+		ul {
+			Link {
+				to: "/insert_information", "Insert information"
+			}
+		}
+		ul {
+			Link {
+				to: "/show_list", "Show information"
+			}
+		}
+		ul {
+			Link {
+				to: "/show_calculations", "Show calculations"
+			}
+		}
+		ul {
+			Link {
+				to: "/information", "Information"
+			}
+		}
+    })
+}
+
 /// Function for rendering main menu window
 
 #[cfg(feature = "desktop")]
@@ -37,81 +61,22 @@ pub fn main_menu(cx: Scope) -> Element {
 		rsx! {
 			style {include_str!("./style/dark_theme.css")}
 
-			div {
-				button {
-					style: "color: black",
-					onclick: move |_| {
-						insert_information(cx)
-					},
-					"Insert Products"
-				}
-			}
+			Router {
+	            self::main_options {}
 
-			div {
-				button {
-					style: "color: black",
-					onclick: move |_| {
-						show_list(cx)
-					},
-					"Show List"
+				Route {
+					to: "/insert_information", self::insert_product {}
 				}
-			}
-
-			div {
-				button {
-					style: "color: black",
-					onclick: move |_| {
-						show_calculations(cx)
-					},
-					"Show total sum & Show percentage"
+				Route {
+					to: "/show_list", self::list {}
 				}
-			}
-
-			div {
-				button {
-					style: "color: black",
-					onclick: move |_| {
-						show_information(cx)
-					},
-					"Info about the program"
+				Route {
+					to: "/show_calculations", self::calculations {}
 				}
-			}
+	            Route {
+					to: "/information", self::information {}
+				}
+            }
 		}
 	}
-}
-
-/// Function for rendering window for entering products
-
-#[cfg(feature = "desktop")]
-fn insert_information(cx: Scope) {
-	let window = dioxus_desktop::use_window(cx);
-
-	window.new_window(VirtualDom::new(insert_product), create_config("FiDeus Insert Products"));
-}
-
-/// Function for rendering window for entering products
-
-#[cfg(feature = "desktop")]
-fn show_list(cx: Scope) {
-	let window = dioxus_desktop::use_window(cx);
-
-	window.new_window(VirtualDom::new(list), create_config("FiDeus List of Products"));
-}
-
-/// Function for rendering window for getting calculations
-
-#[cfg(feature = "desktop")]
-fn show_calculations(cx: Scope) {
-	let window = dioxus_desktop::use_window(cx);
-
-	window.new_window(VirtualDom::new(calculations), create_config("FiDeus Calculations"));
-}
-
-/// Function for rendering window with info about the program
-
-#[cfg(feature = "desktop")]
-fn show_information(cx: Scope) {
-	let window = dioxus_desktop::use_window(cx);
-
-	window.new_window(VirtualDom::new(information), create_config("FiDeus Information"));
 }
