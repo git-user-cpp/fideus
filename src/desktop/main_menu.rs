@@ -30,24 +30,30 @@ use crate::desktop::impl_options::products::insert_product;
 
 fn main_options(cx: Scope) -> Element {
 	cx.render(rsx! {
-		ul {
-			Link {
-				to: "/insert_information", "Insert information"
+		div {
+			button {
+				Link {
+					id: "option",
+					to: "/insert_information", "Insert information"
+				}
 			}
-		}
-		ul {
-			Link {
-				to: "/show_list", "Show information"
+			button {
+				Link {
+					id: "option",
+					to: "/show_list", "Show information"
+				}
 			}
-		}
-		ul {
-			Link {
-				to: "/show_calculations", "Show calculations"
+			button {
+				Link {
+					id: "option",
+					to: "/show_calculations", "Show calculations"
+				}
 			}
-		}
-		ul {
-			Link {
-				to: "/information", "Information"
+			button {
+				Link {
+					id: "option",
+					to: "/information", "Information"
+				}
 			}
 		}
     })
