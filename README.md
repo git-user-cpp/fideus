@@ -1,3 +1,5 @@
+![logo_round_mini](https://github.com/git-user-cpp/fideus/assets/61907955/5e8edaf9-2549-4bbd-89b3-45376ae71bd2)
+
 ![FiDeus](https://github.com/git-user-cpp/fideus/assets/61907955/c2870b6a-ad23-45a1-9657-046d6261491d)
 
 | Linux | Windows | macOs|
